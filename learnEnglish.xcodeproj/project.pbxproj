@@ -7,20 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011EA9B22864CC550078D4CD /* ObjectRecogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogView.xib */; };
+		011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9B32864E4750078D4CD /* AppUtility.swift */; };
+		011EA9B7286562580078D4CD /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingView.xib */; };
+		011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */; };
+		011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */; };
+		011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BE286564410078D4CD /* OnBoardingViewController.swift */; };
+		011EA9C1286564700078D4CD /* Learning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C0286564700078D4CD /* Learning.swift */; };
+		011EA9C32865651C0078D4CD /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C22865651C0078D4CD /* Haptics.swift */; };
+		011EA9C52865653F0078D4CD /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C42865653F0078D4CD /* Constans.swift */; };
+		0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */; };
+		0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */; };
+		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
+		0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7E02864355E001A4D58 /* ViewCapture.swift */; };
+		0124C7E3286435C0001A4D58 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7E2286435C0001A4D58 /* Measure.swift */; };
 		01554D3428617159008AEA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01554D3328617159008AEA27 /* AppDelegate.swift */; };
-		01554D3628617159008AEA27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01554D3528617159008AEA27 /* SceneDelegate.swift */; };
-		01554D3828617159008AEA27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01554D3728617159008AEA27 /* ViewController.swift */; };
-		01554D3B28617159008AEA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3928617159008AEA27 /* Main.storyboard */; };
 		01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3C2861715A008AEA27 /* Assets.xcassets */; };
 		01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011EA9B12864CC550078D4CD /* ObjectRecogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogView.xib; sourceTree = "<group>"; };
+		011EA9B32864E4750078D4CD /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		011EA9B6286562580078D4CD /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
+		011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
+		011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContentViewController.swift; sourceTree = "<group>"; };
+		011EA9BE286564410078D4CD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		011EA9C0286564700078D4CD /* Learning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning.swift; sourceTree = "<group>"; };
+		011EA9C22865651C0078D4CD /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		011EA9C42865653F0078D4CD /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecogViewController.swift; sourceTree = "<group>"; };
+		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		0124C7E02864355E001A4D58 /* ViewCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCapture.swift; sourceTree = "<group>"; };
+		0124C7E2286435C0001A4D58 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		01554D3028617159008AEA27 /* learnEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01554D3328617159008AEA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01554D3528617159008AEA27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01554D3728617159008AEA27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01554D3A28617159008AEA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01554D3C2861715A008AEA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01554D3F2861715A008AEA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01554D412861715A008AEA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +59,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011EA9B5286561E90078D4CD /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */,
+				011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */,
+				011EA9BE286564410078D4CD /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		0124C7D32862DB32001A4D58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0124C7D42862FC6C001A4D58 /* YOLOv3Tiny */,
+				011EA9C0286564700078D4CD /* Learning.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0124C7D42862FC6C001A4D58 /* YOLOv3Tiny */ = {
+			isa = PBXGroup;
+			children = (
+				0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */,
+			);
+			path = YOLOv3Tiny;
+			sourceTree = "<group>";
+		};
+		0124C7D82864228F001A4D58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9B6286562580078D4CD /* OnBoardingView.xib */,
+				011EA9B12864CC550078D4CD /* ObjectRecogView.xib */,
+				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0124C7DD2864313A001A4D58 /* ObjectRecog */ = {
+			isa = PBXGroup;
+			children = (
+				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
+			);
+			path = ObjectRecog;
+			sourceTree = "<group>";
+		};
 		01554D2728617159008AEA27 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +123,53 @@
 		01554D3228617159008AEA27 /* learnEnglish */ = {
 			isa = PBXGroup;
 			children = (
-				01554D3328617159008AEA27 /* AppDelegate.swift */,
-				01554D3528617159008AEA27 /* SceneDelegate.swift */,
-				01554D3728617159008AEA27 /* ViewController.swift */,
-				01554D3928617159008AEA27 /* Main.storyboard */,
-				01554D3C2861715A008AEA27 /* Assets.xcassets */,
+				0124C7D82864228F001A4D58 /* View */,
+				0124C7D32862DB32001A4D58 /* Model */,
+				01554D4A286171E1008AEA27 /* SupportingFiles */,
+				01554D49286171D4008AEA27 /* Utils */,
+				01554D48286171CE008AEA27 /* App */,
+				01554D47286171C0008AEA27 /* ViewController */,
 				01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */,
-				01554D412861715A008AEA27 /* Info.plist */,
 			);
 			path = learnEnglish;
+			sourceTree = "<group>";
+		};
+		01554D47286171C0008AEA27 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9B5286561E90078D4CD /* OnBoarding */,
+				0124C7DD2864313A001A4D58 /* ObjectRecog */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		01554D48286171CE008AEA27 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01554D3328617159008AEA27 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		01554D49286171D4008AEA27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0124C7E02864355E001A4D58 /* ViewCapture.swift */,
+				0124C7E2286435C0001A4D58 /* Measure.swift */,
+				011EA9B32864E4750078D4CD /* AppUtility.swift */,
+				011EA9C22865651C0078D4CD /* Haptics.swift */,
+				011EA9C42865653F0078D4CD /* Constans.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		01554D4A286171E1008AEA27 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				01554D3C2861715A008AEA27 /* Assets.xcassets */,
+				01554D412861715A008AEA27 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +230,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011EA9B22864CC550078D4CD /* ObjectRecogView.xib in Resources */,
+				011EA9B7286562580078D4CD /* OnBoardingView.xib in Resources */,
 				01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */,
 				01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */,
-				01554D3B28617159008AEA27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +244,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01554D3828617159008AEA27 /* ViewController.swift in Sources */,
+				011EA9C32865651C0078D4CD /* Haptics.swift in Sources */,
+				011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */,
+				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
+				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
+				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
+				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
+				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
+				011EA9C1286564700078D4CD /* Learning.swift in Sources */,
+				0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */,
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
-				01554D3628617159008AEA27 /* SceneDelegate.swift in Sources */,
+				011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */,
+				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
+				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		01554D3928617159008AEA27 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01554D3A28617159008AEA27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +397,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = learnEnglish/Info.plist;
+				INFOPLIST_FILE = learnEnglish/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "for inference";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +428,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = learnEnglish/Info.plist;
+				INFOPLIST_FILE = learnEnglish/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "for inference";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
