@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011EA9B22864CC550078D4CD /* ObjectRecogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogView.xib */; };
+		011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */; };
 		011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9B32864E4750078D4CD /* AppUtility.swift */; };
-		011EA9B7286562580078D4CD /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingView.xib */; };
+		011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingViewController.xib */; };
 		011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */; };
 		011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */; };
 		011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BE286564410078D4CD /* OnBoardingViewController.swift */; };
 		011EA9C32865651C0078D4CD /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C22865651C0078D4CD /* Haptics.swift */; };
 		011EA9C52865653F0078D4CD /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C42865653F0078D4CD /* Constans.swift */; };
-		011EA9C828656B870078D4CD /* OnBoardingPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C728656B870078D4CD /* OnBoardingPageView.xib */; };
-		011EA9CA28656BD90078D4CD /* OnBoardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentView.xib */; };
+		011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */; };
+		011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */; };
+		011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9D8286704350078D4CD /* TabExploreViewController.swift */; };
+		011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9D9286704350078D4CD /* TabExploreViewController.xib */; };
+		011EA9E02867045D0078D4CD /* TabReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9DE2867045D0078D4CD /* TabReviewViewController.swift */; };
+		011EA9E12867045D0078D4CD /* TabReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9DF2867045D0078D4CD /* TabReviewViewController.xib */; };
+		011EA9E4286705890078D4CD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9E2286705890078D4CD /* TabBarViewController.swift */; };
+		011EA9E5286705890078D4CD /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9E3286705890078D4CD /* TabBarViewController.xib */; };
 		0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */; };
 		0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */; };
 		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
@@ -28,16 +34,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		011EA9B12864CC550078D4CD /* ObjectRecogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogView.xib; sourceTree = "<group>"; };
+		011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogViewController.xib; sourceTree = "<group>"; };
 		011EA9B32864E4750078D4CD /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
-		011EA9B6286562580078D4CD /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
+		011EA9B6286562580078D4CD /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
 		011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContentViewController.swift; sourceTree = "<group>"; };
 		011EA9BE286564410078D4CD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		011EA9C22865651C0078D4CD /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		011EA9C42865653F0078D4CD /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
-		011EA9C728656B870078D4CD /* OnBoardingPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageView.xib; sourceTree = "<group>"; };
-		011EA9C928656BD90078D4CD /* OnBoardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentView.xib; sourceTree = "<group>"; };
+		011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageViewController.xib; sourceTree = "<group>"; };
+		011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentViewController.xib; sourceTree = "<group>"; };
+		011EA9D8286704350078D4CD /* TabExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabExploreViewController.swift; sourceTree = "<group>"; };
+		011EA9D9286704350078D4CD /* TabExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabExploreViewController.xib; sourceTree = "<group>"; };
+		011EA9DE2867045D0078D4CD /* TabReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabReviewViewController.swift; sourceTree = "<group>"; };
+		011EA9DF2867045D0078D4CD /* TabReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabReviewViewController.xib; sourceTree = "<group>"; };
+		011EA9E2286705890078D4CD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		011EA9E3286705890078D4CD /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecogViewController.swift; sourceTree = "<group>"; };
 		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
@@ -64,29 +76,75 @@
 		011EA9B5286561E90078D4CD /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */,
+				011EA9D42867033C0078D4CD /* View */,
+				011EA9D3286703340078D4CD /* PageView */,
+				011EA9D2286703280078D4CD /* Content */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		011EA9CD286702A10078D4CD /* TabBarHome */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9D7286704110078D4CD /* TabExplore */,
+				011EA9D6286703BB0078D4CD /* TabReview */,
+				011EA9D5286703A40078D4CD /* TabView */,
+			);
+			path = TabBarHome;
+			sourceTree = "<group>";
+		};
+		011EA9D2286703280078D4CD /* Content */ = {
+			isa = PBXGroup;
+			children = (
 				011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */,
+				011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		011EA9D3286703340078D4CD /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */,
+				011EA9C728656B870078D4CD /* OnBoardingPageViewController.xib */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		011EA9D42867033C0078D4CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9B6286562580078D4CD /* OnBoardingViewController.xib */,
 				011EA9BE286564410078D4CD /* OnBoardingViewController.swift */,
 			);
-			path = OnBoarding;
+			path = View;
 			sourceTree = "<group>";
 		};
-		011EA9C628656B4C0078D4CD /* OnBoarding */ = {
+		011EA9D5286703A40078D4CD /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9B6286562580078D4CD /* OnBoardingView.xib */,
-				011EA9C728656B870078D4CD /* OnBoardingPageView.xib */,
-				011EA9C928656BD90078D4CD /* OnBoardingContentView.xib */,
+				011EA9E2286705890078D4CD /* TabBarViewController.swift */,
+				011EA9E3286705890078D4CD /* TabBarViewController.xib */,
 			);
-			path = OnBoarding;
+			path = TabView;
 			sourceTree = "<group>";
 		};
-		011EA9CB2865A8A40078D4CD /* ObjectRecog */ = {
+		011EA9D6286703BB0078D4CD /* TabReview */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9B12864CC550078D4CD /* ObjectRecogView.xib */,
+				011EA9DE2867045D0078D4CD /* TabReviewViewController.swift */,
+				011EA9DF2867045D0078D4CD /* TabReviewViewController.xib */,
 			);
-			path = ObjectRecog;
+			path = TabReview;
+			sourceTree = "<group>";
+		};
+		011EA9D7286704110078D4CD /* TabExplore */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9D8286704350078D4CD /* TabExploreViewController.swift */,
+				011EA9D9286704350078D4CD /* TabExploreViewController.xib */,
+			);
+			path = TabExplore;
 			sourceTree = "<group>";
 		};
 		0124C7D32862DB32001A4D58 /* Model */ = {
@@ -105,19 +163,10 @@
 			path = YOLOv3Tiny;
 			sourceTree = "<group>";
 		};
-		0124C7D82864228F001A4D58 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */,
-				011EA9CB2865A8A40078D4CD /* ObjectRecog */,
-				011EA9C628656B4C0078D4CD /* OnBoarding */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		0124C7DD2864313A001A4D58 /* ObjectRecog */ = {
 			isa = PBXGroup;
 			children = (
+				011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */,
 				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
 				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
 			);
@@ -143,7 +192,7 @@
 		01554D3228617159008AEA27 /* learnEnglish */ = {
 			isa = PBXGroup;
 			children = (
-				0124C7D82864228F001A4D58 /* View */,
+				01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */,
 				0124C7D32862DB32001A4D58 /* Model */,
 				01554D4A286171E1008AEA27 /* SupportingFiles */,
 				01554D49286171D4008AEA27 /* Utils */,
@@ -156,6 +205,7 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				011EA9CD286702A10078D4CD /* TabBarHome */,
 				011EA9B5286561E90078D4CD /* OnBoarding */,
 				0124C7DD2864313A001A4D58 /* ObjectRecog */,
 			);
@@ -249,11 +299,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011EA9C828656B870078D4CD /* OnBoardingPageView.xib in Resources */,
-				011EA9B22864CC550078D4CD /* ObjectRecogView.xib in Resources */,
-				011EA9B7286562580078D4CD /* OnBoardingView.xib in Resources */,
-				011EA9CA28656BD90078D4CD /* OnBoardingContentView.xib in Resources */,
+				011EA9E12867045D0078D4CD /* TabReviewViewController.xib in Resources */,
+				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
+				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
+				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
+				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
+				011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */,
 				01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */,
+				011EA9E5286705890078D4CD /* TabBarViewController.xib in Resources */,
 				01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,8 +320,10 @@
 			files = (
 				011EA9C32865651C0078D4CD /* Haptics.swift in Sources */,
 				011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */,
+				011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */,
 				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
+				011EA9E02867045D0078D4CD /* TabReviewViewController.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
@@ -276,6 +331,7 @@
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
 				011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */,
 				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
+				011EA9E4286705890078D4CD /* TabBarViewController.swift in Sources */,
 				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

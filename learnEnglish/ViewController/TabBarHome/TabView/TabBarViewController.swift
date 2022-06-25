@@ -7,23 +7,35 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func setupView() {
+        self.delegate = delegate
+//        view.backgroundColor = .systemBackground
+//        UITabBar.appearance().barTintColor = .systemBackground
+        tabBar.tintColor = .black
     }
-    */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //tab explore
+        let tabExplore = TabExploreViewController()
+        let tabExploreBarItem = UITabBarItem(title: "Explore", image: UIImage(systemName: "globe"), selectedImage: UIImage(systemName: ""))
+        tabExplore.tabBarItem = tabExploreBarItem
+        
+        //tab review
+        let tabReview = TabReviewViewController()
+        let tabReviewBarItem = UITabBarItem(title: "Review", image: UIImage(systemName: "star.bubble.fill"), selectedImage: UIImage(systemName: "star.bubble.fill"))
+        tabReview.tabBarItem = tabReviewBarItem
+        
+        self.viewControllers = [tabExplore, tabReview]
+    }
 
 }
