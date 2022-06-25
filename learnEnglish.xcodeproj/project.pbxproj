@@ -13,9 +13,10 @@
 		011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */; };
 		011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */; };
 		011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9BE286564410078D4CD /* OnBoardingViewController.swift */; };
-		011EA9C1286564700078D4CD /* Learning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C0286564700078D4CD /* Learning.swift */; };
 		011EA9C32865651C0078D4CD /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C22865651C0078D4CD /* Haptics.swift */; };
 		011EA9C52865653F0078D4CD /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9C42865653F0078D4CD /* Constans.swift */; };
+		011EA9C828656B870078D4CD /* OnBoardingPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C728656B870078D4CD /* OnBoardingPageView.xib */; };
+		011EA9CA28656BD90078D4CD /* OnBoardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentView.xib */; };
 		0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */; };
 		0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */; };
 		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
@@ -33,9 +34,10 @@
 		011EA9BA286564030078D4CD /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
 		011EA9BC286564210078D4CD /* OnBoardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContentViewController.swift; sourceTree = "<group>"; };
 		011EA9BE286564410078D4CD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		011EA9C0286564700078D4CD /* Learning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning.swift; sourceTree = "<group>"; };
 		011EA9C22865651C0078D4CD /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		011EA9C42865653F0078D4CD /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		011EA9C728656B870078D4CD /* OnBoardingPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageView.xib; sourceTree = "<group>"; };
+		011EA9C928656BD90078D4CD /* OnBoardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentView.xib; sourceTree = "<group>"; };
 		0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecogViewController.swift; sourceTree = "<group>"; };
 		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
@@ -69,11 +71,28 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		011EA9C628656B4C0078D4CD /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9B6286562580078D4CD /* OnBoardingView.xib */,
+				011EA9C728656B870078D4CD /* OnBoardingPageView.xib */,
+				011EA9C928656BD90078D4CD /* OnBoardingContentView.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		011EA9CB2865A8A40078D4CD /* ObjectRecog */ = {
+			isa = PBXGroup;
+			children = (
+				011EA9B12864CC550078D4CD /* ObjectRecogView.xib */,
+			);
+			path = ObjectRecog;
+			sourceTree = "<group>";
+		};
 		0124C7D32862DB32001A4D58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				0124C7D42862FC6C001A4D58 /* YOLOv3Tiny */,
-				011EA9C0286564700078D4CD /* Learning.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,9 +108,9 @@
 		0124C7D82864228F001A4D58 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9B6286562580078D4CD /* OnBoardingView.xib */,
-				011EA9B12864CC550078D4CD /* ObjectRecogView.xib */,
-				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
+				01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */,
+				011EA9CB2865A8A40078D4CD /* ObjectRecog */,
+				011EA9C628656B4C0078D4CD /* OnBoarding */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +118,7 @@
 		0124C7DD2864313A001A4D58 /* ObjectRecog */ = {
 			isa = PBXGroup;
 			children = (
+				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
 				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
 			);
 			path = ObjectRecog;
@@ -129,7 +149,6 @@
 				01554D49286171D4008AEA27 /* Utils */,
 				01554D48286171CE008AEA27 /* App */,
 				01554D47286171C0008AEA27 /* ViewController */,
-				01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */,
 			);
 			path = learnEnglish;
 			sourceTree = "<group>";
@@ -230,8 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011EA9C828656B870078D4CD /* OnBoardingPageView.xib in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogView.xib in Resources */,
 				011EA9B7286562580078D4CD /* OnBoardingView.xib in Resources */,
+				011EA9CA28656BD90078D4CD /* OnBoardingContentView.xib in Resources */,
 				01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */,
 				01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */,
 			);
@@ -251,7 +272,6 @@
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
-				011EA9C1286564700078D4CD /* Learning.swift in Sources */,
 				0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */,
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
 				011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */,

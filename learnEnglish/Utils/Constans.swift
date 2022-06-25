@@ -13,13 +13,7 @@ let storyBoardName = "Main"
 let onBoardVCId = "OnBoardingViewController"
 let onBoardPageVCId = "OnboardingPageViewController"
 let onBoardContentVCId = "OnboardingContentViewController"
-let cameraVCId = "CameraViewController"
-let learningVcId = "LearningViewController"
-let detailVCId = "DetailViewController"
-
-//cell
-let learningCellId = "LearningTableViewCell"
 
 //defaults
-let showOnBoard = "showOnBoard"
+let showOnBoard = "showOnBoardLearnEng"
 

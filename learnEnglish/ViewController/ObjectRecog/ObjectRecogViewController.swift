@@ -36,10 +36,6 @@ class ObjectRecogViewController: UIViewController {
     // MARK - Performance Measurement Property
     private let 👨‍🔧 = 📏()
     
-//    let maf1 = MovingAverageFilter()
-//    let maf2 = MovingAverageFilter()
-//    let maf3 = MovingAverageFilter()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,9 +44,6 @@ class ObjectRecogViewController: UIViewController {
         
         // setup camera
         setUpCamera()
-        
-        // setup delegate for performance measurement
-//        👨‍🔧.delegate = self
         
         AppUtility.lockOrientation(.landscapeRight)
     }
@@ -166,40 +159,5 @@ extension ObjectRecogViewController {
         self.semaphore.signal()
     }
 }
-
-// MARK: - 📏(Performance Measurement) Delegate
-//extension ObjectRecogViewController: 📏Delegate {
-//    func updateMeasure(inferenceTime: Double, executionTime: Double, fps: Int) {
-//        //print(executionTime, fps)
-//        DispatchQueue.main.async {
-//            self.maf1.append(element: Int(inferenceTime*1000.0))
-//            self.maf2.append(element: Int(executionTime*1000.0))
-//            self.maf3.append(element: fps)
-//
-//            self.inferenceLabel.text = "inference: \(self.maf1.averageValue) ms"
-//            self.etimeLabel.text = "execution: \(self.maf2.averageValue) ms"
-//            self.fpsLabel.text = "fps: \(self.maf3.averageValue)"
-//        }
-//    }
-//}
-
-//class MovingAverageFilter {
-//    private var arr: [Int] = []
-//    private let maxCount = 10
-//
-//    public func append(element: Int) {
-//        arr.append(element)
-//        if arr.count > maxCount {
-//            arr.removeFirst()
-//        }
-//    }
-//
-//    public var averageValue: Int {
-//        guard !arr.isEmpty else { return 0 }
-//        let sum = arr.reduce(0) { $0 + $1 }
-//        return Int(Double(sum) / Double(arr.count))
-//    }
-//}
-
 
 
