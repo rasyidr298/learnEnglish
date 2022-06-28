@@ -23,7 +23,7 @@ class OnboardingContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = bgColor
+//        view.backgroundColor = bgColor
         imgContent.image = image
         headingLabel.text = heading
         subHeadingLabel.text = subheading

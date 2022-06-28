@@ -16,10 +16,10 @@ class OnboardingPageViewController: UIPageViewController {
     
     weak var pageViewControllerDelegate: onboardingPageViewControllerDelegate?
     
-    var pageTitle = ["Learn Exposure Triangle", "Adjust The Settings", "Simulate Your Settings"]
-    var pageDescriptionText = ["Provide solutions for you to learn exposure",  "You can adjust the exposure triangle settings easily", "You can simulate the exposure triangle settings at the same time"]
-    var pageImage: [UIImage] = [UIImage(named: "ic_triangle_onboard")!, UIImage(named: "ic_setting_onboard")!, UIImage(named: "ic_simulate_onboard")!]
-    var backgroundColor: [UIColor] = [.black, .black, .black]
+    var pageTitle = ["Dear Parents", "Camera", "Report", ""]
+    var pageDescriptionText = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", ""]
+    var pageImage: [UIImage] = [UIImage(named: "ic_onboard1")!, UIImage(named: "ic_onboard2")!, UIImage(named: "ic_onboard3")!, UIImage(named: "ic_onboard4")!, ]
+    var backgroundColor: [UIColor] = [.white, .white, .white, .white]
     
     var currentIndex = 0
     
@@ -31,7 +31,7 @@ class OnboardingPageViewController: UIPageViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .black
+//        view.backgroundColor = .black
         
         dataSource = self
         delegate = self
@@ -39,21 +39,6 @@ class OnboardingPageViewController: UIPageViewController {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
     }
-    
-//    func turnPage(index: Int, type: Int) {
-//        currentIndex = index
-//        if let currentController = contentViewController(at: index) {
-//            switch type {
-//            case 1:
-//                setViewControllers([currentController], direction: .forward, animated: true)
-//            case 2:
-//                setViewControllers([currentController], direction: .reverse, animated: true)
-//            default:
-//                setViewControllers([currentController], direction: .forward, animated: true)
-//            }
-//            self.pageViewControllerDelegate?.turnPageController(to: currentIndex)
-//        }
-//    }
 }
 
 extension OnboardingPageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
@@ -86,7 +71,7 @@ extension OnboardingPageViewController: UIPageViewControllerDataSource, UIPageVi
             return nil
         }
         
-        let pageContentViewController = OnboardingContentViewController(nibName: "OnBoardingContentView", bundle: nil)
+        let pageContentViewController = OnboardingContentViewController(nibName: "OnBoardingContentViewController", bundle: nil)
         
         pageContentViewController.subheading = pageDescriptionText[index]
         pageContentViewController.heading = pageTitle[index]

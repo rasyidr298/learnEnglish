@@ -20,6 +20,11 @@ class OnBoardingViewController: UIViewController {
         super.viewDidLoad()
      
         setupPageView()
+        setupView()
+    }
+    
+    private func setupView() {
+        startButton.layer.cornerRadius = 10
     }
     
     private func setupPageView() {
@@ -49,27 +54,22 @@ class OnBoardingViewController: UIViewController {
 extension OnBoardingViewController {
     
     @IBAction func skipButton(_ sender: Any) {
-        dismiss(animated: true)
         UserDefaults.standard.set(true, forKey: showOnBoard)
+        guard let window = UIApplication.shared.keyWindow else {return}
+        window.rootViewController = TabBarViewController()
+        
+        
+//        let vc = TabBarViewController()
+//        let navCon = UINavigationController(rootViewController: vc)
+//        navCon.modalPresentationStyle = .fullScreen
+//        present(navCon, animated: false)
     }
     
     @IBAction func startButton(_ sender: Any) {
-        dismiss(animated: true)
         UserDefaults.standard.set(true, forKey: showOnBoard)
+        guard let window = UIApplication.shared.keyWindow else {return}
+        window.rootViewController = TabBarViewController()
     }
-    
-//    @IBAction func nextButton(_ sender: Any) {
-//        onBoardingPageViewController?.turnPage(index: pageControl.currentPage + 1, type: 1)
-//
-//        if nextButton.titleLabel?.text == "skip" {
-//            dismiss(animated: true)
-//            UserDefaults.standard.set(true, forKey: showOnBoard)
-//        }
-//    }
-//
-//    @IBAction func previousButton(_ sender: Any) {
-//        onBoardingPageViewController?.turnPage(index: pageControl.currentPage - 1, type: 2)
-//    }
 }
 
 extension OnBoardingViewController: onboardingPageViewControllerDelegate {

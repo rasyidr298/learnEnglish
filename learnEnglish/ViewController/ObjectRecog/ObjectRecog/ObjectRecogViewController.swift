@@ -10,12 +10,11 @@ import Vision
 
 class ObjectRecogViewController: UIViewController {
     
-//    @IBOutlet weak var cameraView: UIView!
-//    @IBOutlet weak var objectView: UIView!
-//    @IBOutlet weak var boxesCameraView: DrawingBoundingBoxView!
-    
+    @IBOutlet weak var objectView: UIView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var boxesCameraView: DrawingBoundingBoxView!
+    
+    var objectTableViewController: ObjectTableViewController!
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
@@ -45,6 +44,8 @@ class ObjectRecogViewController: UIViewController {
         // setup camera
         setUpCamera()
         
+        setupTableView()
+        
         AppUtility.lockOrientation(.landscapeRight)
     }
     
@@ -64,7 +65,28 @@ class ObjectRecogViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoCapture.stop()
-        AppUtility.lockOrientation(.all)
+//        AppUtility.lockOrientation(.all)
+    }
+    
+    @IBAction func closeButton(_ sender: Any) {
+        guard let window = UIApplication.shared.keyWindow else {return}
+        window.rootViewController = TabBarViewController()
+    }
+    
+    private func setupTableView() {
+         objectTableViewController = ObjectTableViewController()
+        
+        addChild(objectTableViewController!)
+        objectView.addSubview((objectTableViewController?.view)!)
+        objectTableViewController?.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            objectTableViewController!.view.leadingAnchor.constraint(equalTo: objectView.leadingAnchor),
+            objectTableViewController!.view.trailingAnchor.constraint(equalTo: objectView.trailingAnchor),
+            objectTableViewController!.view.topAnchor.constraint(equalTo: objectView.topAnchor),
+            objectTableViewController!.view.bottomAnchor.constraint(equalTo: objectView.bottomAnchor)
+        ])
+        
+        objectTableViewController?.didMove(toParent: self)
     }
     
     // MARK: - Setup Core ML

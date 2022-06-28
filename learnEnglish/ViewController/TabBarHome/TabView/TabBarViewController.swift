@@ -19,7 +19,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = delegate
 //        view.backgroundColor = .systemBackground
 //        UITabBar.appearance().barTintColor = .systemBackground
-        tabBar.tintColor = .black
+        tabBar.tintColor = UIColor(named: "mainColor")
+        AppUtility.lockOrientation(.portrait)
     }
     
     override func viewWillAppear(_ animated: Bool) {

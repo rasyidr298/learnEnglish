@@ -24,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="486-yb-aA8">
-                    <rect key="frame" x="338.33333333333331" y="54" width="59.666666666666686" height="34.333333333333343"/>
+                    <rect key="frame" x="347.33333333333331" y="54.000000000000007" width="50.666666666666686" height="27.333333333333336"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="SKIP">
-                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="skipButton:" destination="-1" eventType="touchUpInside" id="pKp-D9-o4t"/>
@@ -35,26 +35,30 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH3-Zq-DUd">
                     <rect key="frame" x="48" y="796" width="332" height="55"/>
+                    <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="jrO-WI-6q6"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="tinted" title="Start"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Start">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="startButton:" destination="-1" eventType="touchUpInside" id="DG7-Sb-mVY"/>
                     </connections>
                 </button>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="diB-z3-xE1">
                     <rect key="frame" x="149" y="744" width="130" height="25"/>
-                    <color key="pageIndicatorTintColor" name="AccentColor"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" name="mainColor"/>
                 </pageControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnZ-LN-lP1" userLabel="ContainerView">
-                    <rect key="frame" x="0.0" y="110.33333333333331" width="428" height="625.66666666666674"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="0.0" y="103.33333333333331" width="428" height="632.66666666666674"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="labelColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="SnZ-LN-lP1" firstAttribute="top" secondItem="486-yb-aA8" secondAttribute="bottom" constant="22" id="7vm-OT-Prs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="diB-z3-xE1" secondAttribute="trailing" constant="149" id="D0V-YK-DYc"/>
@@ -76,8 +80,11 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="mainColor">
+            <color red="0.3921568627" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

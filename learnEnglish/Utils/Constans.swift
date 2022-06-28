@@ -7,8 +7,6 @@
 
 import Foundation
 
-let storyBoardName = "Main"
-
 //viewController
 let onBoardVCId = "OnBoardingViewController"
 let onBoardPageVCId = "OnboardingPageViewController"
