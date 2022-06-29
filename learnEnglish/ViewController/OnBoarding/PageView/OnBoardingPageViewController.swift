@@ -42,6 +42,22 @@ class OnboardingPageViewController: UIPageViewController {
 }
 
 extension OnboardingPageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    func turnPage(index: Int, type: Int) {
+        currentIndex = index
+        if let currentController = contentViewController(at: index) {
+            switch type {
+            case 1:
+                setViewControllers([currentController], direction: .forward, animated: true)
+            case 2:
+                setViewControllers([currentController], direction: .reverse, animated: true)
+            default:
+                setViewControllers([currentController], direction: .forward, animated: true)
+            }
+            self.pageViewControllerDelegate?.turnPageController(to: currentIndex)
+        }
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if var index = (viewController as? OnboardingContentViewController)?.index {
             index -= 1
@@ -78,7 +94,7 @@ extension OnboardingPageViewController: UIPageViewControllerDataSource, UIPageVi
         pageContentViewController.bgColor = backgroundColor[index]
         pageContentViewController.index = index
         pageContentViewController.image = pageImage[index]
-        self.pageViewControllerDelegate?.setupPageController(numberOfPage: 3)
+        self.pageViewControllerDelegate?.setupPageController(numberOfPage: 4)
         
         return pageContentViewController
     }

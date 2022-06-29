@@ -9,9 +9,9 @@ import UIKit
 
 class OnBoardingViewController: UIViewController {
     
-    @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
     var onBoardingPageViewController: OnboardingPageViewController?
@@ -25,12 +25,15 @@ class OnBoardingViewController: UIViewController {
     
     private func setupView() {
         startButton.layer.cornerRadius = 10
+        nextButton.layer.cornerRadius = 10
+        startButton.isHidden = true
     }
     
     private func setupPageView() {
         onBoardingPageViewController = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
-        addChild(onBoardingPageViewController!)
+        onBoardingPageViewController?.pageViewControllerDelegate = self
+        
         containerView.addSubview((onBoardingPageViewController?.view)!)
         onBoardingPageViewController?.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -53,22 +56,18 @@ class OnBoardingViewController: UIViewController {
 
 extension OnBoardingViewController {
     
-    @IBAction func skipButton(_ sender: Any) {
-        UserDefaults.standard.set(true, forKey: showOnBoard)
-        guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = TabBarViewController()
-        
-        
-//        let vc = TabBarViewController()
-//        let navCon = UINavigationController(rootViewController: vc)
-//        navCon.modalPresentationStyle = .fullScreen
-//        present(navCon, animated: false)
-    }
+    @IBAction func nextButton(_ sender: Any) {
+                onBoardingPageViewController?.turnPage(index: pageControl.currentPage + 1, type: 1)    }
     
     @IBAction func startButton(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: showOnBoard)
         guard let window = UIApplication.shared.keyWindow else {return}
         window.rootViewController = TabBarViewController()
+        
+        //        let vc = TabBarViewController()
+        //        let navCon = UINavigationController(rootViewController: vc)
+        //        navCon.modalPresentationStyle = .fullScreen
+        //        present(navCon, animated: false)
     }
 }
 
@@ -80,16 +79,12 @@ extension OnBoardingViewController: onboardingPageViewControllerDelegate {
     func turnPageController(to index: Int) {
         pageControl.currentPage = index
         
-        if index == 2 {
-            skipButton.isHidden = true
-        }else {
-            skipButton.isHidden = false
-        }
-        
-        if index == 2 {
+        if index == 3 {
             startButton.isHidden = false
+            nextButton.isHidden = true
         }else {
             startButton.isHidden = true
+            nextButton.isHidden = false
         }
         
     }

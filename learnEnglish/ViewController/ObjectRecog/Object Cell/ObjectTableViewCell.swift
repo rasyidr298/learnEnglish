@@ -28,7 +28,7 @@ class ObjectTableViewCell: UITableViewCell {
     func setupView() {
         bgView.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 8
-        containerView.isHidden = true
+//        containerView.isHidden = true
     }
     
     func updateObjectCell(itemIsMatch: Bool) {

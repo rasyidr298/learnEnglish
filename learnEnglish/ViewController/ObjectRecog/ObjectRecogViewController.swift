@@ -10,11 +10,11 @@ import Vision
 
 class ObjectRecogViewController: UIViewController {
     
-    @IBOutlet weak var objectView: UIView!
+    @IBOutlet weak var objectTableView: UITableView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var boxesCameraView: DrawingBoundingBoxView!
     
-    var objectTableViewController: ObjectTableViewController!
+    var listObject: [Object] = []
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
@@ -44,7 +44,7 @@ class ObjectRecogViewController: UIViewController {
         // setup camera
         setUpCamera()
         
-        setupTableView()
+        setupTable()
         
         AppUtility.lockOrientation(.landscapeRight)
     }
@@ -71,22 +71,6 @@ class ObjectRecogViewController: UIViewController {
     @IBAction func closeButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
         window.rootViewController = TabBarViewController()
-    }
-    
-    private func setupTableView() {
-         objectTableViewController = ObjectTableViewController()
-        
-        addChild(objectTableViewController!)
-        objectView.addSubview((objectTableViewController?.view)!)
-        objectTableViewController?.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            objectTableViewController!.view.leadingAnchor.constraint(equalTo: objectView.leadingAnchor),
-            objectTableViewController!.view.trailingAnchor.constraint(equalTo: objectView.trailingAnchor),
-            objectTableViewController!.view.topAnchor.constraint(equalTo: objectView.topAnchor),
-            objectTableViewController!.view.bottomAnchor.constraint(equalTo: objectView.bottomAnchor)
-        ])
-        
-        objectTableViewController?.didMove(toParent: self)
     }
     
     // MARK: - Setup Core ML
@@ -182,4 +166,32 @@ extension ObjectRecogViewController {
     }
 }
 
+extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func setupTable() {
+        self.listObject.append(contentsOf: Object.dataObject())
+        
+        objectTableView.dataSource = self
+        objectTableView.delegate = self
+        
+        let nib = UINib(nibName: "ObjectTableViewCell", bundle: nil)
+        
+        objectTableView.register(nib, forCellReuseIdentifier: "ObjectTableViewCell")
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let objectListData = listObject[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ObjectTableViewCell") as! ObjectTableViewCell
+        
+        cell.selectionStyle = .none
+        cell.object = objectListData
+        cell.updateObjectCell(itemIsMatch: true)
+            
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listObject.count
+    }
+}
 

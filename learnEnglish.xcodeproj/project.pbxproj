@@ -26,8 +26,6 @@
 		011EA9ED28671D160078D4CD /* ObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */; };
 		011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */; };
 		011EA9F0286843B00078D4CD /* ObjectRecog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EF286843B00078D4CD /* ObjectRecog.swift */; };
-		011EA9F328684B770078D4CD /* ObjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9F128684B770078D4CD /* ObjectTableViewController.swift */; };
-		011EA9F428684B770078D4CD /* ObjectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9F228684B770078D4CD /* ObjectTableViewController.xib */; };
 		0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */; };
 		0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */; };
 		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
@@ -58,8 +56,6 @@
 		011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewCell.swift; sourceTree = "<group>"; };
 		011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectTableViewCell.xib; sourceTree = "<group>"; };
 		011EA9EF286843B00078D4CD /* ObjectRecog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecog.swift; sourceTree = "<group>"; };
-		011EA9F128684B770078D4CD /* ObjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewController.swift; sourceTree = "<group>"; };
-		011EA9F228684B770078D4CD /* ObjectTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectTableViewController.xib; sourceTree = "<group>"; };
 		0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecogViewController.swift; sourceTree = "<group>"; };
 		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
@@ -157,33 +153,13 @@
 			path = TabExplore;
 			sourceTree = "<group>";
 		};
-		011EA9E628671BD40078D4CD /* ObjectTableView */ = {
-			isa = PBXGroup;
-			children = (
-				011EA9F5286851BB0078D4CD /* Cell */,
-				011EA9F128684B770078D4CD /* ObjectTableViewController.swift */,
-				011EA9F228684B770078D4CD /* ObjectTableViewController.xib */,
-			);
-			path = ObjectTableView;
-			sourceTree = "<group>";
-		};
-		011EA9F5286851BB0078D4CD /* Cell */ = {
+		011EA9F5286851BB0078D4CD /* Object Cell */ = {
 			isa = PBXGroup;
 			children = (
 				011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */,
 				011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */,
 			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		011EA9F6286851CD0078D4CD /* ObjectRecog */ = {
-			isa = PBXGroup;
-			children = (
-				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
-				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
-				011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */,
-			);
-			path = ObjectRecog;
+			path = "Object Cell";
 			sourceTree = "<group>";
 		};
 		0124C7D32862DB32001A4D58 /* Model */ = {
@@ -206,8 +182,10 @@
 		0124C7DD2864313A001A4D58 /* ObjectRecog */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9F6286851CD0078D4CD /* ObjectRecog */,
-				011EA9E628671BD40078D4CD /* ObjectTableView */,
+				011EA9F5286851BB0078D4CD /* Object Cell */,
+				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
+				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
+				011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */,
 			);
 			path = ObjectRecog;
 			sourceTree = "<group>";
@@ -342,7 +320,6 @@
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
-				011EA9F428684B770078D4CD /* ObjectTableViewController.xib in Resources */,
 				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
 				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
 				011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */,
@@ -367,7 +344,6 @@
 				011EA9E02867045D0078D4CD /* TabReviewViewController.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
-				011EA9F328684B770078D4CD /* ObjectTableViewController.swift in Sources */,
 				011EA9F0286843B00078D4CD /* ObjectRecog.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
 				0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */,
