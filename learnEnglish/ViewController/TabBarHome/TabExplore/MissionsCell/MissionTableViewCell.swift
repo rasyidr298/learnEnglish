@@ -42,6 +42,7 @@ class MissionTableViewCell: UITableViewCell {
     }
     
     func setupView() {
+        playButton.layer.cornerRadius = 8
         containerView.map { cont in
             cont.layer.cornerRadius = 8
             cont.backgroundColor = .secondarySystemBackground

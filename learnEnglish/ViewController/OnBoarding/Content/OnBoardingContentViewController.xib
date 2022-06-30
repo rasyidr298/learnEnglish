@@ -12,7 +12,6 @@
             <connections>
                 <outlet property="headingLabel" destination="cuu-1t-KE3" id="lZ0-1X-WFJ"/>
                 <outlet property="imgContent" destination="ba0-gO-csW" id="wLq-tc-L2i"/>
-                <outlet property="nameTextField" destination="sv6-X6-jCK" id="GWq-aW-CWe"/>
                 <outlet property="subHeadingLabel" destination="vCs-9J-6JC" id="kYX-cF-zJM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="oYg-LP-Qc6"/>
             </connections>
@@ -22,14 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sv6-X6-jCK">
-                    <rect key="frame" x="36" y="764" width="341" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="xF5-ah-1DW"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ba0-gO-csW">
                     <rect key="frame" x="33" y="119" width="347" height="558.5"/>
                     <constraints>
@@ -37,13 +28,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-1t-KE3">
-                    <rect key="frame" x="33" y="693.5" width="347" height="42.5"/>
+                    <rect key="frame" x="33" y="753" width="347" height="42.5"/>
                     <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCs-9J-6JC">
-                    <rect key="frame" x="33" y="744" width="347" height="74"/>
+                    <rect key="frame" x="33" y="803.5" width="347" height="14.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -60,11 +51,7 @@
                 <constraint firstItem="vCs-9J-6JC" firstAttribute="top" secondItem="cuu-1t-KE3" secondAttribute="bottom" constant="8" id="W2z-yc-3Sk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vCs-9J-6JC" secondAttribute="bottom" constant="44" id="Yyg-A1-cW4"/>
                 <constraint firstItem="cuu-1t-KE3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="33" id="bhJ-w5-qDu"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sv6-X6-jCK" secondAttribute="trailing" constant="37" id="cNo-kn-B7h"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sv6-X6-jCK" secondAttribute="bottom" constant="64" id="hvn-mH-Jtv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ba0-gO-csW" secondAttribute="trailing" constant="34" id="kDH-du-WoU"/>
-                <constraint firstItem="sv6-X6-jCK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="qFD-DE-0d8"/>
-                <constraint firstItem="sv6-X6-jCK" firstAttribute="top" secondItem="cuu-1t-KE3" secondAttribute="bottom" constant="28" id="sK5-al-nte"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vCs-9J-6JC" secondAttribute="trailing" constant="34" id="vwh-Re-Wd1"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>

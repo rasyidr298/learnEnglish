@@ -7,12 +7,13 @@
 
 import UIKit
 
-class OnBoardingViewController: UIViewController {
+class OnBoardingViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var loginName: UITextField!
     
     var onBoardingPageViewController: OnboardingPageViewController?
     
@@ -27,6 +28,8 @@ class OnBoardingViewController: UIViewController {
         startButton.layer.cornerRadius = 10
         nextButton.layer.cornerRadius = 10
         startButton.isHidden = true
+        loginName.isHidden = true
+        loginName.delegate = self
     }
     
     private func setupPageView() {
@@ -52,17 +55,30 @@ class OnBoardingViewController: UIViewController {
             onBoardingPageViewController = onBoardingViewController
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        loginName.resignFirstResponder()
+        return true
+    }
 }
 
 extension OnBoardingViewController {
     
     @IBAction func nextButton(_ sender: Any) {
-                onBoardingPageViewController?.turnPage(index: pageControl.currentPage + 1, type: 1)    }
+        onBoardingPageViewController?.turnPage(index: pageControl.currentPage + 1, type: 1)
+    }
     
     @IBAction func startButton(_ sender: Any) {
-        UserDefaults.standard.set(true, forKey: showOnBoard)
-        guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = TabBarViewController()
+        
+        if (loginName.text == "") {
+            allert(view: self, title: "Allert", message: "name is required!")
+        }else {
+            UserDefaults.standard.set(true, forKey: showOnBoard)
+            UserDefaults.standard.set(loginName.text, forKey: loginNameDef)
+
+            guard let window = UIApplication.shared.keyWindow else {return}
+            window.rootViewController = TabBarViewController()
+        }
         
         //        let vc = TabBarViewController()
         //        let navCon = UINavigationController(rootViewController: vc)
@@ -82,9 +98,11 @@ extension OnBoardingViewController: onboardingPageViewControllerDelegate {
         if index == 3 {
             startButton.isHidden = false
             nextButton.isHidden = true
+            loginName.isHidden = false
         }else {
             startButton.isHidden = true
             nextButton.isHidden = false
+            loginName.isHidden = true
         }
         
     }

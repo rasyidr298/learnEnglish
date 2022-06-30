@@ -14,4 +14,5 @@ let onBoardContentVCId = "OnboardingContentViewController"
 
 //defaults
 let showOnBoard = "showOnBoardLearnEng"
+let loginNameDef = "loginNameDef"
 

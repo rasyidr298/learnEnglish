@@ -9,6 +9,7 @@ import UIKit
 
 class TabExploreViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var loginNameLabel: UILabel!
     @IBOutlet weak var uiScrollView: UIScrollView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var missionTableView: UITableView!
@@ -23,15 +24,19 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
         
         setupView()
         setupTable()
+    }
+    
+    func setupView() {
+        headerView.layer.cornerRadius = 8
+        
+        loginNameLabel.text = "Hi \(UserDefaults.standard.string(forKey: loginNameDef) ?? "")"
+        
+        //tableview inside scroll
         tableHeight.constant = self.view.frame.height-350
         self.missionTableView.isScrollEnabled = false
         //no need to write following if checked in storyboard
         self.uiScrollView.bounces = false
         self.missionTableView.bounces = true
-    }
-    
-    func setupView() {
-        headerView.layer.cornerRadius = 8
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

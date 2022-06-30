@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabExploreViewController" customModule="learnEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="headerView" destination="O4a-TM-VYp" id="Rqu-7s-XQn"/>
+                <outlet property="loginNameLabel" destination="QX6-Hm-RbC" id="ZHd-01-J8c"/>
                 <outlet property="missionTableView" destination="n7X-ld-Zek" id="0Zu-FW-SRX"/>
                 <outlet property="tableHeight" destination="EVm-ed-CyT" id="xqV-0V-PY6"/>
                 <outlet property="tableWidth" destination="LI7-PO-mr8" id="Ae0-4c-fLX"/>
