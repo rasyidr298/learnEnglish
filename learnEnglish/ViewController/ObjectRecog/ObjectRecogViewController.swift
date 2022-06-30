@@ -49,10 +49,6 @@ class ObjectRecogViewController: UIViewController {
         AppUtility.lockOrientation(.landscapeRight)
     }
     
-    //    @IBAction func closeButton(_ sender: Any) {
-//        //back to home
-//    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -65,7 +61,6 @@ class ObjectRecogViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoCapture.stop()
-//        AppUtility.lockOrientation(.all)
     }
     
     @IBAction func closeButton(_ sender: Any) {
@@ -170,6 +165,7 @@ extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource 
     
     func setupTable() {
         self.listObject.append(contentsOf: Object.dataObject())
+        UITableView.appearance().separatorColor = .clear
         
         objectTableView.dataSource = self
         objectTableView.delegate = self
@@ -185,7 +181,7 @@ extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource 
         
         cell.selectionStyle = .none
         cell.object = objectListData
-        cell.updateObjectCell(itemIsMatch: true)
+        cell.updateObjectCell(itemIsMatch: false)
             
         return cell
     }

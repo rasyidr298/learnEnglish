@@ -17,8 +17,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     func setupView() {
         self.delegate = delegate
-//        view.backgroundColor = .systemBackground
-//        UITabBar.appearance().barTintColor = .systemBackground
+        
+        tabBar.backgroundColor = .secondarySystemBackground
         tabBar.tintColor = UIColor(named: "mainColor")
         AppUtility.lockOrientation(.portrait)
     }

@@ -21,31 +21,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="132" height="129"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjk-2b-4BT">
-                                <rect key="frame" x="25" y="24" width="82" height="81"/>
+                                <rect key="frame" x="15" y="14" width="102" height="101"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZOS-rh-sp3">
-                                        <rect key="frame" x="31" y="31" width="20" height="19"/>
+                                        <rect key="frame" x="13" y="13" width="76" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="9DF-2L-aET"/>
-                                            <constraint firstAttribute="height" constant="20" id="h48-1n-4Ll"/>
+                                            <constraint firstAttribute="height" constant="76" id="6Su-Jh-fPs"/>
+                                            <constraint firstAttribute="width" constant="76" id="O9s-bh-XhR"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="DEH-o5-3rf"/>
-                                    <constraint firstItem="ZOS-rh-sp3" firstAttribute="centerY" secondItem="Xjk-2b-4BT" secondAttribute="centerY" id="PAz-10-QTN"/>
-                                    <constraint firstItem="ZOS-rh-sp3" firstAttribute="centerX" secondItem="Xjk-2b-4BT" secondAttribute="centerX" id="hrd-f8-7os"/>
-                                    <constraint firstAttribute="width" constant="82" id="jLC-eL-n5S"/>
+                                    <constraint firstItem="ZOS-rh-sp3" firstAttribute="centerY" secondItem="Xjk-2b-4BT" secondAttribute="centerY" id="BNN-na-9FI"/>
+                                    <constraint firstAttribute="width" constant="102" id="XTU-mP-H8e"/>
+                                    <constraint firstItem="ZOS-rh-sp3" firstAttribute="centerX" secondItem="Xjk-2b-4BT" secondAttribute="centerX" id="daw-PC-d5d"/>
+                                    <constraint firstAttribute="height" constant="101" id="xvj-1x-5vb"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xjk-2b-4BT" firstAttribute="centerX" secondItem="5bo-C8-C0i" secondAttribute="centerX" id="08K-RY-hCD"/>
+                            <constraint firstItem="Xjk-2b-4BT" firstAttribute="centerX" secondItem="5bo-C8-C0i" secondAttribute="centerX" id="V4N-jh-P4J"/>
                             <constraint firstAttribute="width" constant="132" id="luM-4D-Pbh"/>
-                            <constraint firstItem="Xjk-2b-4BT" firstAttribute="centerY" secondItem="5bo-C8-C0i" secondAttribute="centerY" id="mxQ-T5-IyB"/>
                             <constraint firstAttribute="height" constant="129" id="rVy-Z8-cou"/>
+                            <constraint firstItem="Xjk-2b-4BT" firstAttribute="centerY" secondItem="5bo-C8-C0i" secondAttribute="centerY" id="uvK-Z6-yzC"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -19,7 +19,7 @@ public class VideoCapture: NSObject {
     
     let captureSession = AVCaptureSession()
     let videoOutput = AVCaptureVideoDataOutput()
-    let queue = DispatchQueue(label: "com.tucan9389.camera-queue")
+    let queue = DispatchQueue(label: "camera-queue")
     
     var lastTimestamp = CMTime()
     
@@ -53,7 +53,7 @@ public class VideoCapture: NSObject {
         }
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         previewLayer.connection?.videoOrientation = .landscapeRight
         self.previewLayer = previewLayer
         
