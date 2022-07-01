@@ -17,7 +17,9 @@ class OnboardingPageViewController: UIPageViewController {
     weak var pageViewControllerDelegate: onboardingPageViewControllerDelegate?
     
     var pageTitle = ["Dear Parents", "Camera", "Report", ""]
-    var pageDescriptionText = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", ""]
+    var pageDescriptionText = ["this apps made for your children to grow in exploring by english. You can let your children exploring in 'explore'.",
+                               "The app uses the camera to recognize surrounding area.",
+                               "You can also receive information about your child's activities in review.", ""]
     var pageImage: [UIImage] = [UIImage(named: "ic_onboard1")!, UIImage(named: "ic_onboard2")!, UIImage(named: "ic_onboard3")!, UIImage(named: "ic_onboard4")!, ]
     var backgroundColor: [UIColor] = [.white, .white, .white, .white]
     

@@ -13,8 +13,12 @@ class ObjectRecogViewController: UIViewController {
     @IBOutlet weak var objectTableView: UITableView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var boxesCameraView: DrawingBoundingBoxView!
+    @IBOutlet weak var levelLabel: UILabel!
     
-    var listObject: [Object] = []
+    var missionTableViewCell: MissionTableViewCell?
+    
+//    var listObject: [Object] = []
+    var mission: Mission?
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
@@ -46,7 +50,13 @@ class ObjectRecogViewController: UIViewController {
         
         setupTable()
         
+        setupView()
+        
         AppUtility.lockOrientation(.landscapeRight)
+    }
+    
+    func setupView() {
+        levelLabel.text = "Level \(mission?.level ?? 0)"
     }
     
     override func didReceiveMemoryWarning() {
@@ -164,7 +174,7 @@ extension ObjectRecogViewController {
 extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource {
     
     func setupTable() {
-        self.listObject.append(contentsOf: Object.dataObject())
+//        self.listObject.append(contentsOf: Object.dataObject())
         UITableView.appearance().separatorColor = .clear
         
         objectTableView.dataSource = self
@@ -176,18 +186,17 @@ extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let objectListData = listObject[indexPath.row]
+        let objectListData = mission?.object[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ObjectTableViewCell") as! ObjectTableViewCell
         
         cell.selectionStyle = .none
-        cell.object = objectListData
+        cell.object = objectListData!
         cell.updateObjectCell(itemIsMatch: false)
             
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listObject.count
+        return (mission?.object.count)!
     }
 }
-

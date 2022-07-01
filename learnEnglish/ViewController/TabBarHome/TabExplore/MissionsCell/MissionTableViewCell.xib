@@ -138,12 +138,12 @@
                 <outlet property="objectImage5" destination="sik-tQ-ITz" id="Dei-lR-5QG"/>
                 <outlet property="playButton" destination="MXY-qz-Tgg" id="pVG-mz-2Mw"/>
             </connections>
-            <point key="canvasLocation" x="177.536231884058" y="206.25"/>
+            <point key="canvasLocation" x="446" y="206"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="mainColor">
-            <color red="0.3921568627" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.2784313725" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

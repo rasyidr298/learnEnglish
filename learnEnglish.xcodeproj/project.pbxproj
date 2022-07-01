@@ -25,11 +25,11 @@
 		011EA9E5286705890078D4CD /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9E3286705890078D4CD /* TabBarViewController.xib */; };
 		011EA9ED28671D160078D4CD /* ObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */; };
 		011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */; };
-		011EA9F0286843B00078D4CD /* ObjectRecog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EF286843B00078D4CD /* ObjectRecog.swift */; };
-		011EA9F8286C366B0078D4CD /* Missions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9F7286C366B0078D4CD /* Missions.swift */; };
+		011EA9F0286843B00078D4CD /* Missions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EF286843B00078D4CD /* Missions.swift */; };
 		011EA9FC286C4DBD0078D4CD /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9FA286C4DBD0078D4CD /* MissionTableViewCell.swift */; };
 		011EA9FD286C4DBD0078D4CD /* MissionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9FB286C4DBD0078D4CD /* MissionTableViewCell.xib */; };
 		011EAA01286D9D100078D4CD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EAA00286D9D100078D4CD /* View.swift */; };
+		011EAA03286DC7F10078D4CD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EAA02286DC7F10078D4CD /* Logger.swift */; };
 		0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */; };
 		0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */; };
 		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
@@ -59,11 +59,11 @@
 		011EA9E3286705890078D4CD /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewCell.swift; sourceTree = "<group>"; };
 		011EA9EC28671D160078D4CD /* ObjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectTableViewCell.xib; sourceTree = "<group>"; };
-		011EA9EF286843B00078D4CD /* ObjectRecog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecog.swift; sourceTree = "<group>"; };
-		011EA9F7286C366B0078D4CD /* Missions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missions.swift; sourceTree = "<group>"; };
+		011EA9EF286843B00078D4CD /* Missions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missions.swift; sourceTree = "<group>"; };
 		011EA9FA286C4DBD0078D4CD /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
 		011EA9FB286C4DBD0078D4CD /* MissionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissionTableViewCell.xib; sourceTree = "<group>"; };
 		011EAA00286D9D100078D4CD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		011EAA02286DC7F10078D4CD /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0124C7D52862FC9E001A4D58 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecogViewController.swift; sourceTree = "<group>"; };
 		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
@@ -184,8 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0124C7D42862FC6C001A4D58 /* YOLOv3Tiny */,
-				011EA9EF286843B00078D4CD /* ObjectRecog.swift */,
-				011EA9F7286C366B0078D4CD /* Missions.swift */,
+				011EA9EF286843B00078D4CD /* Missions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +264,7 @@
 				011EA9C22865651C0078D4CD /* Haptics.swift */,
 				011EA9C42865653F0078D4CD /* Constans.swift */,
 				011EAA00286D9D100078D4CD /* View.swift */,
+				011EAA02286DC7F10078D4CD /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -361,13 +361,13 @@
 				011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */,
 				011EA9FC286C4DBD0078D4CD /* MissionTableViewCell.swift in Sources */,
 				011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */,
+				011EAA03286DC7F10078D4CD /* Logger.swift in Sources */,
 				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
 				011EA9E02867045D0078D4CD /* TabReviewViewController.swift in Sources */,
-				011EA9F8286C366B0078D4CD /* Missions.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
-				011EA9F0286843B00078D4CD /* ObjectRecog.swift in Sources */,
+				011EA9F0286843B00078D4CD /* Missions.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
 				011EAA01286D9D100078D4CD /* View.swift in Sources */,
 				0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */,

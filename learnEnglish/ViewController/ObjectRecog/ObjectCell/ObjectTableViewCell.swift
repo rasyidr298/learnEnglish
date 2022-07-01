@@ -13,7 +13,7 @@ class ObjectTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var objectImg: UIImageView!
     
-    var object: Object?
+    var object: ObjectRecog?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +28,6 @@ class ObjectTableViewCell: UITableViewCell {
     func setupView() {
         bgView.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 8
-//        containerView.isHidden = true
     }
     
     func updateObjectCell(itemIsMatch: Bool) {

@@ -52,14 +52,6 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8U-H6-AFD">
                     <rect key="frame" x="0.0" y="126" width="414" height="770"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n7X-ld-Zek">
-                            <rect key="frame" x="20" y="198" width="374" height="557"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="557" id="EVm-ed-CyT"/>
-                                <constraint firstAttribute="width" constant="374" id="LI7-PO-mr8"/>
-                            </constraints>
-                        </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJs-hL-ND3">
                             <rect key="frame" x="20" y="173" width="59.5" height="17"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -74,11 +66,55 @@
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4a-TM-VYp">
                             <rect key="frame" x="20" y="16" width="374" height="137"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Learning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSU-y2-ILK">
+                                    <rect key="frame" x="27" y="32" width="131.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice job! Keep Exploring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-0l-kHx">
+                                    <rect key="frame" x="27" y="68" width="167" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and keep learning 💪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlS-N8-S9f">
+                                    <rect key="frame" x="27" y="89" width="147" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_badge" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-n9-bkY">
+                                    <rect key="frame" x="282" y="35" width="67" height="67"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="67" id="g6q-9a-1Sb"/>
+                                        <constraint firstAttribute="height" constant="67" id="tpI-Ya-LC6"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" name="mainColor"/>
                             <constraints>
+                                <constraint firstItem="g5c-n9-bkY" firstAttribute="top" secondItem="O4a-TM-VYp" secondAttribute="top" constant="35" id="JTN-CG-NLu"/>
+                                <constraint firstAttribute="trailing" secondItem="g5c-n9-bkY" secondAttribute="trailing" constant="25" id="NRe-hn-k2k"/>
+                                <constraint firstItem="pEn-0l-kHx" firstAttribute="top" secondItem="jSU-y2-ILK" secondAttribute="bottom" constant="12" id="YoC-GD-KTy"/>
+                                <constraint firstItem="tlS-N8-S9f" firstAttribute="top" secondItem="pEn-0l-kHx" secondAttribute="bottom" constant="3" id="ZqY-W5-098"/>
+                                <constraint firstItem="pEn-0l-kHx" firstAttribute="leading" secondItem="O4a-TM-VYp" secondAttribute="leading" constant="27" id="Zx4-to-8ol"/>
+                                <constraint firstItem="jSU-y2-ILK" firstAttribute="leading" secondItem="O4a-TM-VYp" secondAttribute="leading" constant="27" id="gPp-aO-xcx"/>
+                                <constraint firstItem="tlS-N8-S9f" firstAttribute="leading" secondItem="O4a-TM-VYp" secondAttribute="leading" constant="27" id="k3L-as-Od8"/>
                                 <constraint firstAttribute="height" constant="137" id="mpY-TA-tB8"/>
+                                <constraint firstAttribute="bottom" secondItem="g5c-n9-bkY" secondAttribute="bottom" constant="35" id="teQ-r5-LBw"/>
+                                <constraint firstItem="jSU-y2-ILK" firstAttribute="top" secondItem="O4a-TM-VYp" secondAttribute="top" constant="32" id="zSO-Mr-o2P"/>
                             </constraints>
                         </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n7X-ld-Zek">
+                            <rect key="frame" x="20" y="198" width="374" height="557"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="557" id="EVm-ed-CyT"/>
+                                <constraint firstAttribute="width" constant="374" id="LI7-PO-mr8"/>
+                            </constraints>
+                        </tableView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="n7X-ld-Zek" secondAttribute="trailing" constant="20" id="4CE-bO-b9e"/>
@@ -116,9 +152,10 @@
         </view>
     </objects>
     <resources>
+        <image name="ic_badge" width="70" height="84"/>
         <image name="ic_onboard1" width="299" height="299"/>
         <namedColor name="mainColor">
-            <color red="0.3921568627" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.27799999713897705" green="0.70999997854232788" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -49,12 +49,12 @@ class OnBoardingViewController: UIViewController,UITextFieldDelegate {
         onBoardingPageViewController?.didMove(toParent: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let onBoardingViewController = segue.destination as? OnboardingPageViewController {
-            onBoardingViewController.pageViewControllerDelegate = self
-            onBoardingPageViewController = onBoardingViewController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? OnboardingPageViewController {
+//            vc.pageViewControllerDelegate = self
+//            onBoardingPageViewController = vc
+//        }
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         loginName.resignFirstResponder()
@@ -79,11 +79,6 @@ extension OnBoardingViewController {
             guard let window = UIApplication.shared.keyWindow else {return}
             window.rootViewController = TabBarViewController()
         }
-        
-        //        let vc = TabBarViewController()
-        //        let navCon = UINavigationController(rootViewController: vc)
-        //        navCon.modalPresentationStyle = .fullScreen
-        //        present(navCon, animated: false)
     }
 }
 

@@ -29,16 +29,23 @@ class MissionTableViewCell: UITableViewCell {
         
         setupView()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     @IBAction func playButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
-        window.rootViewController = ObjectRecogViewController()
+        let vc = ObjectRecogViewController()
+        vc.mission = self.missions
+        window.rootViewController = vc
+        
+        
+//        let vc = ObjectRecogViewController()
+//        let navCon = UINavigationController(rootViewController: vc)
+//        navCon.modalPresentationStyle = .fullScreen
+//        present(navCon, animated: false)
+        
+//        if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+//            navigationController.present(ObjectRecogViewController(), animated: false)
+//            navigationController.viewControllers.last as! TabBarViewController
+//        }
     }
     
     func setupView() {
