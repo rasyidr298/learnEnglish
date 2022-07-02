@@ -35,6 +35,7 @@
 		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
 		0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7E02864355E001A4D58 /* ViewCapture.swift */; };
 		0124C7E3286435C0001A4D58 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7E2286435C0001A4D58 /* Measure.swift */; };
+		013458AF2870526400BCAAE6 /* gun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 013458AE2870526400BCAAE6 /* gun.mp3 */; };
 		01554D3428617159008AEA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01554D3328617159008AEA27 /* AppDelegate.swift */; };
 		01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3C2861715A008AEA27 /* Assets.xcassets */; };
 		01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */; };
@@ -69,6 +70,7 @@
 		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
 		0124C7E02864355E001A4D58 /* ViewCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCapture.swift; sourceTree = "<group>"; };
 		0124C7E2286435C0001A4D58 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		013458AE2870526400BCAAE6 /* gun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gun.mp3; sourceTree = "<group>"; };
 		01554D3028617159008AEA27 /* learnEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01554D3328617159008AEA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01554D3C2861715A008AEA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = ObjectRecog;
 			sourceTree = "<group>";
 		};
+		013458AB287050AA00BCAAE6 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				013458AE2870526400BCAAE6 /* gun.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		01554D2728617159008AEA27 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +267,7 @@
 		01554D49286171D4008AEA27 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				013458AB287050AA00BCAAE6 /* sounds */,
 				0124C7E02864355E001A4D58 /* ViewCapture.swift */,
 				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
 				0124C7E2286435C0001A4D58 /* Measure.swift */,
@@ -339,6 +350,7 @@
 				011EA9E12867045D0078D4CD /* TabReviewViewController.xib in Resources */,
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */,
+				013458AF2870526400BCAAE6 /* gun.mp3 in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
 				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
 				011EA9FD286C4DBD0078D4CD /* MissionTableViewCell.xib in Resources */,

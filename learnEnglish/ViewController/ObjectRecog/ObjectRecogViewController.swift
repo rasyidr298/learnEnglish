@@ -7,6 +7,7 @@
 
 import UIKit
 import Vision
+import AVFoundation
 
 class ObjectRecogViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class ObjectRecogViewController: UIViewController {
     
     public var mission: Mission?
     private let measure = Measure()
+    var player:AVAudioPlayer!
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
@@ -109,6 +111,18 @@ extension ObjectRecogViewController: VideoCaptureDelegate {
             self.predictUsingVision(pixelBuffer: pixelBuffer)
         }
     }
+    
+    func playSound(soundName: String) {
+        let path = Bundle.main.path(forResource: soundName, ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player.play()
+        } catch let error{
+            print(error.localizedDescription)
+        }
+    }
 }
 
 // MARK: - Vision & CoreML
@@ -183,5 +197,10 @@ extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (mission?.object.count)!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("name object :" , mission?.object[indexPath.row].objectName ?? "")
+//        playSound(soundName: "gun.mp3")
     }
 }
