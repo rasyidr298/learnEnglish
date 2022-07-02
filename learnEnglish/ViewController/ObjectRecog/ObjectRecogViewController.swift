@@ -15,13 +15,12 @@ class ObjectRecogViewController: UIViewController {
     @IBOutlet weak var boxesCameraView: DrawingBoundingBoxView!
     @IBOutlet weak var levelLabel: UILabel!
     
-    var missionTableViewCell: MissionTableViewCell?
-    
-//    var listObject: [Object] = []
-    var mission: Mission?
+    public var mission: Mission?
+    private let measure = Measure()
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
+    var predictions: [VNRecognizedObjectObservation] = []
     
     // MARK: - Vision Properties
     var request: VNCoreMLRequest?
@@ -33,30 +32,28 @@ class ObjectRecogViewController: UIViewController {
     let semaphore = DispatchSemaphore(value: 1)
     var lastExecution = Date()
     
-    // MARK: - TableView Data
-    var predictions: [VNRecognizedObjectObservation] = []
-    
-    // MARK - Performance Measurement Property
-    private let 👨‍🔧 = 📏()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // setup the model
         setUpModel()
-        
-        // setup camera
         setUpCamera()
-        
         setupTable()
-        
         setupView()
-        
-        AppUtility.lockOrientation(.landscapeRight)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        resizePreviewLayer()
     }
     
     func setupView() {
+        AppUtility.lockOrientation(.landscapeRight)
         levelLabel.text = "Level \(mission?.level ?? 0)"
+    }
+    
+    func resizePreviewLayer() {
+        videoCapture.previewLayer?.frame = cameraView.bounds
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,22 +74,13 @@ class ObjectRecogViewController: UIViewController {
         guard let window = UIApplication.shared.keyWindow else {return}
         window.rootViewController = TabBarViewController()
     }
-    
-    // MARK: - Setup Core ML
-    func setUpModel() {
-        if let visionModel = try? VNCoreMLModel(for: objectDectectionModel.model) {
-            self.visionModel = visionModel
-            request = VNCoreMLRequest(model: visionModel, completionHandler: visionRequestDidComplete)
-            request?.imageCropAndScaleOption = .scaleFill
-        } else {
-            fatalError("fail to create vision model")
-        }
-    }
+}
 
-    // MARK: - SetUp Video
+// MARK: - VideoCaptureDelegate
+extension ObjectRecogViewController: VideoCaptureDelegate {
     func setUpCamera() {
         videoCapture = VideoCapture()
-        videoCapture.delegate = self
+        videoCapture.videoDelegate = self
         videoCapture.fps = 60
         videoCapture.setUp(sessionPreset: .vga640x480) { success in
             
@@ -109,25 +97,13 @@ class ObjectRecogViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        resizePreviewLayer()
-    }
-    
-    func resizePreviewLayer() {
-        videoCapture.previewLayer?.frame = cameraView.bounds
-    }
-}
-
-// MARK: - VideoCaptureDelegate
-extension ObjectRecogViewController: VideoCaptureDelegate {
     func videoCapture(_ capture: VideoCapture, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?, timestamp: CMTime) {
         // the captured image from camera is contained on pixelBuffer
         if !self.isInferencing, let pixelBuffer = pixelBuffer {
             self.isInferencing = true
             
             // start of measure
-            self.👨‍🔧.🎬👏()
+            self.measure.start()
             
             // predict!
             self.predictUsingVision(pixelBuffer: pixelBuffer)
@@ -135,7 +111,18 @@ extension ObjectRecogViewController: VideoCaptureDelegate {
     }
 }
 
+// MARK: - Vision & CoreML
 extension ObjectRecogViewController {
+    func setUpModel() {
+        if let visionModel = try? VNCoreMLModel(for: objectDectectionModel.model) {
+            self.visionModel = visionModel
+            request = VNCoreMLRequest(model: visionModel, completionHandler: visionRequestDidComplete)
+            request?.imageCropAndScaleOption = .scaleFill
+        } else {
+            fatalError("fail to create vision model")
+        }
+    }
+    
     func predictUsingVision(pixelBuffer: CVPixelBuffer) {
         guard let request = request else { fatalError() }
         // vision framework configures the input size of image following our model's input configuration automatically
@@ -144,26 +131,25 @@ extension ObjectRecogViewController {
         try? handler.perform([request])
     }
     
-    // MARK: - Post-processing
     func visionRequestDidComplete(request: VNRequest, error: Error?) {
-        self.👨‍🔧.🏷(with: "endInference")
+        self.measure.label(with: "endInference")
         if let predictions = request.results as? [VNRecognizedObjectObservation] {
-//            print(predictions.first?.labels.first?.identifier ?? "nil")
-//            print(predictions.first?.labels.first?.confidence ?? -1)
+            //            print(predictions.first?.labels.first?.identifier ?? "nil")
+            //            print(predictions.first?.labels.first?.confidence ?? -1)
             
             self.predictions = predictions
             DispatchQueue.main.async {
                 self.boxesCameraView.predictedObjects = predictions
-//                self.labelsTableView.reloadData()
-
+                //                self.labelsTableView.reloadData()
+                
                 // end of measure
-                self.👨‍🔧.🎬🤚()
+                self.measure.stop()
                 
                 self.isInferencing = false
             }
         } else {
             // end of measure
-            self.👨‍🔧.🎬🤚()
+            self.measure.stop()
             
             self.isInferencing = false
         }
@@ -171,10 +157,9 @@ extension ObjectRecogViewController {
     }
 }
 
+// MARK: - TableViewMission
 extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func setupTable() {
-//        self.listObject.append(contentsOf: Object.dataObject())
         UITableView.appearance().separatorColor = .clear
         
         objectTableView.dataSource = self
@@ -192,10 +177,10 @@ extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource 
         cell.selectionStyle = .none
         cell.object = objectListData!
         cell.updateObjectCell(itemIsMatch: false)
-            
+        
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (mission?.object.count)!
     }

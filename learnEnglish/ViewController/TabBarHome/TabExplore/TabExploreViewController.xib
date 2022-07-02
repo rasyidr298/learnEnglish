@@ -58,12 +58,6 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See More" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZd-F0-Rav">
-                            <rect key="frame" x="340" y="173" width="54" height="14.5"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4a-TM-VYp">
                             <rect key="frame" x="20" y="16" width="374" height="137"/>
                             <subviews>
@@ -124,10 +118,8 @@
                         <constraint firstItem="FJs-hL-ND3" firstAttribute="top" secondItem="O4a-TM-VYp" secondAttribute="bottom" constant="20" id="Kjd-3g-o91"/>
                         <constraint firstItem="O4a-TM-VYp" firstAttribute="top" secondItem="q8U-H6-AFD" secondAttribute="top" constant="16" id="Kvr-sB-UKm"/>
                         <constraint firstItem="n7X-ld-Zek" firstAttribute="centerX" secondItem="q8U-H6-AFD" secondAttribute="centerX" id="LYI-Ho-43Z"/>
-                        <constraint firstItem="rZd-F0-Rav" firstAttribute="top" secondItem="O4a-TM-VYp" secondAttribute="bottom" constant="20" id="RT7-UP-08E"/>
                         <constraint firstItem="FJs-hL-ND3" firstAttribute="leading" secondItem="q8U-H6-AFD" secondAttribute="leading" constant="20" id="VYP-ZP-iTe"/>
                         <constraint firstItem="n7X-ld-Zek" firstAttribute="top" secondItem="FJs-hL-ND3" secondAttribute="bottom" constant="8" id="cxG-WO-8ND"/>
-                        <constraint firstAttribute="trailing" secondItem="rZd-F0-Rav" secondAttribute="trailing" constant="20" id="i76-ah-Ymc"/>
                         <constraint firstAttribute="trailing" secondItem="O4a-TM-VYp" secondAttribute="trailing" constant="20" id="iNp-Ml-xdg"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="EQd-yD-ph5"/>

@@ -14,7 +14,7 @@ public protocol VideoCaptureDelegate: class {
 
 public class VideoCapture: NSObject {
     public var previewLayer: AVCaptureVideoPreviewLayer?
-    public weak var delegate: VideoCaptureDelegate?
+    public weak var videoDelegate: VideoCaptureDelegate?
     public var fps = 15
     
     let captureSession = AVCaptureSession()
@@ -101,7 +101,7 @@ extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
         if deltaTime >= CMTimeMake(value: 1, timescale: Int32(fps)) {
             lastTimestamp = timestamp
             let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
-            delegate?.videoCapture(self, didCaptureVideoFrame: imageBuffer, timestamp: timestamp)
+            videoDelegate?.videoCapture(self, didCaptureVideoFrame: imageBuffer, timestamp: timestamp)
         }
     }
     

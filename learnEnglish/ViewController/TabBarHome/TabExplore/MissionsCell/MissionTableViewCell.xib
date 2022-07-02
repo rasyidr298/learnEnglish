@@ -94,13 +94,24 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCN-1j-bD2">
-                                <rect key="frame" x="317" y="20" width="34" height="34"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaY-uD-aoc">
+                                <rect key="frame" x="267" y="20" width="84" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZa-YB-4Av">
+                                        <rect key="frame" x="13.5" y="4.5" width="57.5" height="11"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                        <color key="textColor" name="mainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="KT4-d3-vSi"/>
-                                    <constraint firstAttribute="width" constant="34" id="R4F-BX-UD3"/>
+                                    <constraint firstItem="vZa-YB-4Av" firstAttribute="centerY" secondItem="FaY-uD-aoc" secondAttribute="centerY" id="3bs-2F-b8t"/>
+                                    <constraint firstAttribute="height" constant="20" id="TnO-Ew-NOx"/>
+                                    <constraint firstAttribute="width" constant="84" id="ntT-zj-ag7"/>
+                                    <constraint firstItem="vZa-YB-4Av" firstAttribute="centerX" secondItem="FaY-uD-aoc" secondAttribute="centerX" id="sL2-pE-IcF"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -108,13 +119,13 @@
                             <constraint firstItem="CZv-G8-OvA" firstAttribute="leading" secondItem="JJs-Nj-Nlp" secondAttribute="leading" constant="22" id="3w6-8i-7eU"/>
                             <constraint firstItem="HgZ-1w-IPY" firstAttribute="top" secondItem="JJs-Nj-Nlp" secondAttribute="top" constant="20" symbolic="YES" id="8mV-u0-rOz"/>
                             <constraint firstItem="HgZ-1w-IPY" firstAttribute="leading" secondItem="JJs-Nj-Nlp" secondAttribute="leading" constant="22" id="Cui-WI-bC8"/>
-                            <constraint firstItem="nCN-1j-bD2" firstAttribute="top" secondItem="JJs-Nj-Nlp" secondAttribute="top" constant="20" symbolic="YES" id="FBk-iB-Tj0"/>
                             <constraint firstItem="MXY-qz-Tgg" firstAttribute="top" secondItem="CZv-G8-OvA" secondAttribute="bottom" constant="29" id="QM0-hU-sR7"/>
                             <constraint firstItem="MXY-qz-Tgg" firstAttribute="leading" secondItem="JJs-Nj-Nlp" secondAttribute="leading" constant="22" id="RW1-St-acx"/>
                             <constraint firstAttribute="trailing" secondItem="CZv-G8-OvA" secondAttribute="trailing" constant="24" id="V32-hi-5zT"/>
                             <constraint firstAttribute="bottom" secondItem="MXY-qz-Tgg" secondAttribute="bottom" constant="27" id="Wz3-Eu-Ztc"/>
-                            <constraint firstAttribute="trailing" secondItem="nCN-1j-bD2" secondAttribute="trailing" constant="24" id="nQi-Qm-LhG"/>
                             <constraint firstAttribute="trailing" secondItem="MXY-qz-Tgg" secondAttribute="trailing" constant="24" id="pWc-8z-i6B"/>
+                            <constraint firstAttribute="trailing" secondItem="FaY-uD-aoc" secondAttribute="trailing" constant="24" id="pjC-Dd-xNJ"/>
+                            <constraint firstItem="FaY-uD-aoc" firstAttribute="top" secondItem="JJs-Nj-Nlp" secondAttribute="top" constant="20" symbolic="YES" id="uDo-gn-rJf"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -127,10 +138,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="badgeImage" destination="nCN-1j-bD2" id="5rr-Rj-WAH"/>
                 <outlet property="containerView" destination="JJs-Nj-Nlp" id="PFK-gd-rTQ"/>
                 <outlet property="countObjectLabel" destination="HFN-Vg-XHS" id="UZn-0y-BHY"/>
+                <outlet property="levelBgView" destination="FaY-uD-aoc" id="2e5-cR-lwA"/>
                 <outlet property="levelLabel" destination="cBy-dS-5O8" id="kt0-pc-340"/>
+                <outlet property="levelUnlockLabel" destination="vZa-YB-4Av" id="agS-Zo-H5c"/>
                 <outlet property="objectImage1" destination="4OE-ca-nvM" id="TsE-vL-3l0"/>
                 <outlet property="objectImage2" destination="nTu-EY-7XW" id="gdy-2m-HJg"/>
                 <outlet property="objectImage3" destination="Rwm-b9-K2U" id="POe-dI-cmz"/>
@@ -138,7 +150,7 @@
                 <outlet property="objectImage5" destination="sik-tQ-ITz" id="Dei-lR-5QG"/>
                 <outlet property="playButton" destination="MXY-qz-Tgg" id="pVG-mz-2Mw"/>
             </connections>
-            <point key="canvasLocation" x="446" y="206"/>
+            <point key="canvasLocation" x="445.6521739130435" y="205.58035714285714"/>
         </tableViewCell>
     </objects>
     <resources>

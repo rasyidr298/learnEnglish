@@ -49,13 +49,6 @@ class OnBoardingViewController: UIViewController,UITextFieldDelegate {
         onBoardingPageViewController?.didMove(toParent: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? OnboardingPageViewController {
-//            vc.pageViewControllerDelegate = self
-//            onBoardingPageViewController = vc
-//        }
-//    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         loginName.resignFirstResponder()
         return true
@@ -63,7 +56,6 @@ class OnBoardingViewController: UIViewController,UITextFieldDelegate {
 }
 
 extension OnBoardingViewController {
-    
     @IBAction func nextButton(_ sender: Any) {
         onBoardingPageViewController?.turnPage(index: pageControl.currentPage + 1, type: 1)
     }
@@ -82,7 +74,7 @@ extension OnBoardingViewController {
     }
 }
 
-extension OnBoardingViewController: onboardingPageViewControllerDelegate {
+extension OnBoardingViewController: OnboardingPageViewControllerDelegate {
     func setupPageController(numberOfPage: Int) {
         pageControl.numberOfPages = numberOfPage
     }

@@ -202,7 +202,6 @@
 			children = (
 				011EA9F5286851BB0078D4CD /* ObjectCell */,
 				0124C7D9286422C9001A4D58 /* ObjectRecogViewController.swift */,
-				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
 				011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */,
 			);
 			path = ObjectRecog;
@@ -259,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				0124C7E02864355E001A4D58 /* ViewCapture.swift */,
+				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
 				0124C7E2286435C0001A4D58 /* Measure.swift */,
 				011EA9B32864E4750078D4CD /* AppUtility.swift */,
 				011EA9C22865651C0078D4CD /* Haptics.swift */,

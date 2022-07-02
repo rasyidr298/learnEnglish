@@ -7,16 +7,17 @@
 
 import UIKit
 
-protocol onboardingPageViewControllerDelegate: AnyObject {
+protocol OnboardingPageViewControllerDelegate: AnyObject {
     func setupPageController(numberOfPage: Int)
     func turnPageController(to index: Int)
 }
 
 class OnboardingPageViewController: UIPageViewController {
+    weak var pageViewControllerDelegate: OnboardingPageViewControllerDelegate?
     
-    weak var pageViewControllerDelegate: onboardingPageViewControllerDelegate?
-    
-    var pageTitle = ["Dear Parents", "Camera", "Report", ""]
+    var pageTitle = ["Dear Parents",
+                     "Camera",
+                     "Report", ""]
     var pageDescriptionText = ["this apps made for your children to grow in exploring by english. You can let your children exploring in 'explore'.",
                                "The app uses the camera to recognize surrounding area.",
                                "You can also receive information about your child's activities in review.", ""]

@@ -17,7 +17,7 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
     @IBOutlet weak var tableWidth: NSLayoutConstraint!
     
-    var listObject: [Mission] = []
+    private var listObject: [Mission] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
         setupTable()
     }
     
-    func setupView() {
+    private func setupView() {
         headerView.layer.cornerRadius = 8
         
         loginNameLabel.text = "Hi \(UserDefaults.standard.string(forKey: loginNameDef) ?? "")"

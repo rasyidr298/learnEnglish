@@ -10,7 +10,7 @@ import UIKit
 
 struct Mission {
     var level: Int
-    var isComplete: Bool
+    var isLockLevel: Bool
     var object: [ObjectRecog]
 }
 
@@ -26,13 +26,13 @@ struct ObjectRecog {
 extension Mission {
     static func dataObject() -> [Mission] {
         return [
-            Mission(level: 1, isComplete: false, object: [
+            Mission(level: 1, isLockLevel: false, object: [
                 ObjectRecog(objectName: "sepatu", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard1")!),
                 ObjectRecog(objectName: "sandal", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard2")!),
                 ObjectRecog(objectName: "kaus kaki", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard3")!)
             ]),
             
-            Mission(level: 2, isComplete: false, object: [
+            Mission(level: 2, isLockLevel: false, object: [
                 ObjectRecog(objectName: "piring", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard1")!),
                 ObjectRecog(objectName: "garpu", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard2")!),
                 ObjectRecog(objectName: "pisau", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard3")!)

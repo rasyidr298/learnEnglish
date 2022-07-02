@@ -13,7 +13,7 @@ class ObjectTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var objectImg: UIImageView!
     
-    var object: ObjectRecog?
+    public var object: ObjectRecog?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,12 +25,12 @@ class ObjectTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setupView() {
+    private func setupView() {
         bgView.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 8
     }
     
-    func updateObjectCell(itemIsMatch: Bool) {
+    public func updateObjectCell(itemIsMatch: Bool) {
         objectImg.image = object?.objectImage
         if itemIsMatch {
             bgView.backgroundColor = object?.objectBgColor[1]

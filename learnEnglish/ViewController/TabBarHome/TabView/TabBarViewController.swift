@@ -28,7 +28,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
         //tab explore
         let tabExplore = TabExploreViewController()
-        let tabExploreBarItem = UITabBarItem(title: "Explore", image: UIImage(systemName: "globe"), selectedImage: UIImage(systemName: ""))
+        let tabExploreBarItem = UITabBarItem(title: "Explore", image: UIImage(named: "ic_explore"), selectedImage: UIImage(systemName: ""))
         tabExplore.tabBarItem = tabExploreBarItem
         
         //tab review
