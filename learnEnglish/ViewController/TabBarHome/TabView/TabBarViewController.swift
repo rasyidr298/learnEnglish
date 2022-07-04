@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
@@ -32,11 +33,12 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         tabExplore.tabBarItem = tabExploreBarItem
         
         //tab review
-        let tabReview = TabReviewViewController()
+        let swiftUIController = UIHostingController(rootView: ReviewView())
+//        let tabReview = TabReviewViewController()
         let tabReviewBarItem = UITabBarItem(title: "Review", image: UIImage(systemName: "star.bubble.fill"), selectedImage: UIImage(systemName: "star.bubble.fill"))
-        tabReview.tabBarItem = tabReviewBarItem
+        swiftUIController.tabBarItem = tabReviewBarItem
         
-        self.viewControllers = [tabExplore, tabReview]
+        self.viewControllers = [tabExplore, swiftUIController]
     }
 
 }

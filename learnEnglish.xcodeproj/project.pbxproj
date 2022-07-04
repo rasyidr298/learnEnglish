@@ -19,8 +19,6 @@
 		011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */; };
 		011EA9DA286704350078D4CD /* TabExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9D8286704350078D4CD /* TabExploreViewController.swift */; };
 		011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9D9286704350078D4CD /* TabExploreViewController.xib */; };
-		011EA9E02867045D0078D4CD /* TabReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9DE2867045D0078D4CD /* TabReviewViewController.swift */; };
-		011EA9E12867045D0078D4CD /* TabReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9DF2867045D0078D4CD /* TabReviewViewController.xib */; };
 		011EA9E4286705890078D4CD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9E2286705890078D4CD /* TabBarViewController.swift */; };
 		011EA9E5286705890078D4CD /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9E3286705890078D4CD /* TabBarViewController.xib */; };
 		011EA9ED28671D160078D4CD /* ObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */; };
@@ -50,6 +48,7 @@
 		01B9725428729921007F1521 /* tv.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724E28729921007F1521 /* tv.mp3 */; };
 		01B972582872B25E007F1521 /* CustomAllertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B972562872B25E007F1521 /* CustomAllertViewController.swift */; };
 		01B972592872B25E007F1521 /* CustomAllertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B972572872B25E007F1521 /* CustomAllertViewController.xib */; };
+		01B9725C2873428E007F1521 /* TabReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B9725B2873428E007F1521 /* TabReviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +64,6 @@
 		011EA9C928656BD90078D4CD /* OnBoardingContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingContentViewController.xib; sourceTree = "<group>"; };
 		011EA9D8286704350078D4CD /* TabExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabExploreViewController.swift; sourceTree = "<group>"; };
 		011EA9D9286704350078D4CD /* TabExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabExploreViewController.xib; sourceTree = "<group>"; };
-		011EA9DE2867045D0078D4CD /* TabReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabReviewViewController.swift; sourceTree = "<group>"; };
-		011EA9DF2867045D0078D4CD /* TabReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabReviewViewController.xib; sourceTree = "<group>"; };
 		011EA9E2286705890078D4CD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		011EA9E3286705890078D4CD /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		011EA9EB28671D160078D4CD /* ObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +95,7 @@
 		01B9724E28729921007F1521 /* tv.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tv.mp3; sourceTree = "<group>"; };
 		01B972562872B25E007F1521 /* CustomAllertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAllertViewController.swift; sourceTree = "<group>"; };
 		01B972572872B25E007F1521 /* CustomAllertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAllertViewController.xib; sourceTree = "<group>"; };
+		01B9725B2873428E007F1521 /* TabReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabReviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +168,7 @@
 		011EA9D6286703BB0078D4CD /* TabReview */ = {
 			isa = PBXGroup;
 			children = (
-				011EA9DE2867045D0078D4CD /* TabReviewViewController.swift */,
-				011EA9DF2867045D0078D4CD /* TabReviewViewController.xib */,
+				01B9725B2873428E007F1521 /* TabReviewView.swift */,
 			);
 			path = TabReview;
 			sourceTree = "<group>";
@@ -399,7 +396,6 @@
 				01B972482872851A007F1521 /* correct.aiff in Resources */,
 				01B972592872B25E007F1521 /* CustomAllertViewController.xib in Resources */,
 				01B9725128729921007F1521 /* book.mp3 in Resources */,
-				011EA9E12867045D0078D4CD /* TabReviewViewController.xib in Resources */,
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
 				01B9725028729921007F1521 /* backpack.mp3 in Resources */,
 				011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */,
@@ -434,8 +430,8 @@
 				011EAA03286DC7F10078D4CD /* Logger.swift in Sources */,
 				011EA9BB286564030078D4CD /* OnBoardingPageViewController.swift in Sources */,
 				0124C7E3286435C0001A4D58 /* Measure.swift in Sources */,
-				011EA9E02867045D0078D4CD /* TabReviewViewController.swift in Sources */,
 				0124C7DB286422C9001A4D58 /* ObjectRecogViewController.swift in Sources */,
+				01B9725C2873428E007F1521 /* TabReviewView.swift in Sources */,
 				0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */,
 				011EA9F0286843B00078D4CD /* Missions.swift in Sources */,
 				011EA9C52865653F0078D4CD /* Constans.swift in Sources */,
@@ -585,13 +581,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = learnEnglish/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App requires acces to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -606,6 +603,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,13 +615,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = learnEnglish/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App requires acces to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -638,6 +637,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
