@@ -35,10 +35,21 @@
 		0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */; };
 		0124C7E12864355E001A4D58 /* ViewCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7E02864355E001A4D58 /* ViewCapture.swift */; };
 		0124C7E3286435C0001A4D58 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124C7E2286435C0001A4D58 /* Measure.swift */; };
-		013458AF2870526400BCAAE6 /* gun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 013458AE2870526400BCAAE6 /* gun.mp3 */; };
+		013458B12871ACC100BCAAE6 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013458B02871ACC100BCAAE6 /* ConfettiView.swift */; };
+		013458B52871AE5300BCAAE6 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013458B32871AE5300BCAAE6 /* FinishViewController.swift */; };
+		013458B62871AE5300BCAAE6 /* FinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013458B42871AE5300BCAAE6 /* FinishViewController.xib */; };
 		01554D3428617159008AEA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01554D3328617159008AEA27 /* AppDelegate.swift */; };
 		01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3C2861715A008AEA27 /* Assets.xcassets */; };
 		01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */; };
+		01B972482872851A007F1521 /* correct.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 01B972472872851A007F1521 /* correct.aiff */; };
+		01B9724F28729921007F1521 /* cup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724928729920007F1521 /* cup.mp3 */; };
+		01B9725028729921007F1521 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
+		01B9725128729921007F1521 /* book.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724B28729920007F1521 /* book.mp3 */; };
+		01B9725228729921007F1521 /* clock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724C28729921007F1521 /* clock.mp3 */; };
+		01B9725328729921007F1521 /* laptop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724D28729921007F1521 /* laptop.mp3 */; };
+		01B9725428729921007F1521 /* tv.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724E28729921007F1521 /* tv.mp3 */; };
+		01B972582872B25E007F1521 /* CustomAllertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B972562872B25E007F1521 /* CustomAllertViewController.swift */; };
+		01B972592872B25E007F1521 /* CustomAllertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B972572872B25E007F1521 /* CustomAllertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,12 +81,23 @@
 		0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
 		0124C7E02864355E001A4D58 /* ViewCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCapture.swift; sourceTree = "<group>"; };
 		0124C7E2286435C0001A4D58 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
-		013458AE2870526400BCAAE6 /* gun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gun.mp3; sourceTree = "<group>"; };
+		013458B02871ACC100BCAAE6 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		013458B32871AE5300BCAAE6 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		013458B42871AE5300BCAAE6 /* FinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishViewController.xib; sourceTree = "<group>"; };
 		01554D3028617159008AEA27 /* learnEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01554D3328617159008AEA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01554D3C2861715A008AEA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01554D3F2861715A008AEA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01554D412861715A008AEA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B972472872851A007F1521 /* correct.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = correct.aiff; sourceTree = "<group>"; };
+		01B9724928729920007F1521 /* cup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cup.mp3; sourceTree = "<group>"; };
+		01B9724A28729920007F1521 /* backpack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backpack.mp3; sourceTree = "<group>"; };
+		01B9724B28729920007F1521 /* book.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book.mp3; sourceTree = "<group>"; };
+		01B9724C28729921007F1521 /* clock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock.mp3; sourceTree = "<group>"; };
+		01B9724D28729921007F1521 /* laptop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptop.mp3; sourceTree = "<group>"; };
+		01B9724E28729921007F1521 /* tv.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tv.mp3; sourceTree = "<group>"; };
+		01B972562872B25E007F1521 /* CustomAllertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAllertViewController.swift; sourceTree = "<group>"; };
+		01B972572872B25E007F1521 /* CustomAllertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAllertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,9 +234,24 @@
 		013458AB287050AA00BCAAE6 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				013458AE2870526400BCAAE6 /* gun.mp3 */,
+				01B9724A28729920007F1521 /* backpack.mp3 */,
+				01B9724B28729920007F1521 /* book.mp3 */,
+				01B9724C28729921007F1521 /* clock.mp3 */,
+				01B9724928729920007F1521 /* cup.mp3 */,
+				01B9724D28729921007F1521 /* laptop.mp3 */,
+				01B9724E28729921007F1521 /* tv.mp3 */,
+				01B972472872851A007F1521 /* correct.aiff */,
 			);
 			path = sounds;
+			sourceTree = "<group>";
+		};
+		013458B22871AE2100BCAAE6 /* FinishView */ = {
+			isa = PBXGroup;
+			children = (
+				013458B32871AE5300BCAAE6 /* FinishViewController.swift */,
+				013458B42871AE5300BCAAE6 /* FinishViewController.xib */,
+			);
+			path = FinishView;
 			sourceTree = "<group>";
 		};
 		01554D2728617159008AEA27 = {
@@ -249,6 +286,8 @@
 		01554D47286171C0008AEA27 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				01B972552872B233007F1521 /* CustomAllert */,
+				013458B22871AE2100BCAAE6 /* FinishView */,
 				011EA9CD286702A10078D4CD /* TabBarHome */,
 				011EA9B5286561E90078D4CD /* OnBoarding */,
 				0124C7DD2864313A001A4D58 /* ObjectRecog */,
@@ -267,7 +306,6 @@
 		01554D49286171D4008AEA27 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				013458AB287050AA00BCAAE6 /* sounds */,
 				0124C7E02864355E001A4D58 /* ViewCapture.swift */,
 				0124C7DE28643427001A4D58 /* DrawingBoundingBoxView.swift */,
 				0124C7E2286435C0001A4D58 /* Measure.swift */,
@@ -276,6 +314,7 @@
 				011EA9C42865653F0078D4CD /* Constans.swift */,
 				011EAA00286D9D100078D4CD /* View.swift */,
 				011EAA02286DC7F10078D4CD /* Logger.swift */,
+				013458B02871ACC100BCAAE6 /* ConfettiView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -283,10 +322,20 @@
 		01554D4A286171E1008AEA27 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				013458AB287050AA00BCAAE6 /* sounds */,
 				01554D3C2861715A008AEA27 /* Assets.xcassets */,
 				01554D412861715A008AEA27 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		01B972552872B233007F1521 /* CustomAllert */ = {
+			isa = PBXGroup;
+			children = (
+				01B972562872B25E007F1521 /* CustomAllertViewController.swift */,
+				01B972572872B25E007F1521 /* CustomAllertViewController.xib */,
+			);
+			path = CustomAllert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,18 +396,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B972482872851A007F1521 /* correct.aiff in Resources */,
+				01B972592872B25E007F1521 /* CustomAllertViewController.xib in Resources */,
+				01B9725128729921007F1521 /* book.mp3 in Resources */,
 				011EA9E12867045D0078D4CD /* TabReviewViewController.xib in Resources */,
 				011EA9C828656B870078D4CD /* OnBoardingPageViewController.xib in Resources */,
+				01B9725028729921007F1521 /* backpack.mp3 in Resources */,
 				011EA9EE28671D160078D4CD /* ObjectTableViewCell.xib in Resources */,
-				013458AF2870526400BCAAE6 /* gun.mp3 in Resources */,
 				011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */,
 				011EA9DB286704350078D4CD /* TabExploreViewController.xib in Resources */,
 				011EA9FD286C4DBD0078D4CD /* MissionTableViewCell.xib in Resources */,
+				01B9725228729921007F1521 /* clock.mp3 in Resources */,
+				01B9725328729921007F1521 /* laptop.mp3 in Resources */,
+				01B9725428729921007F1521 /* tv.mp3 in Resources */,
 				011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */,
 				011EA9CA28656BD90078D4CD /* OnBoardingContentViewController.xib in Resources */,
 				01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */,
 				011EA9E5286705890078D4CD /* TabBarViewController.xib in Resources */,
+				013458B62871AE5300BCAAE6 /* FinishViewController.xib in Resources */,
 				01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */,
+				01B9724F28729921007F1521 /* cup.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013458B12871ACC100BCAAE6 /* ConfettiView.swift in Sources */,
 				011EA9C32865651C0078D4CD /* Haptics.swift in Sources */,
 				011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */,
 				011EA9FC286C4DBD0078D4CD /* MissionTableViewCell.swift in Sources */,
@@ -384,11 +442,13 @@
 				011EAA01286D9D100078D4CD /* View.swift in Sources */,
 				0124C7D62862FC9E001A4D58 /* YOLOv3Tiny.mlmodel in Sources */,
 				01554D3428617159008AEA27 /* AppDelegate.swift in Sources */,
+				01B972582872B25E007F1521 /* CustomAllertViewController.swift in Sources */,
 				011EA9BD286564210078D4CD /* OnBoardingContentViewController.swift in Sources */,
 				0124C7DF28643427001A4D58 /* DrawingBoundingBoxView.swift in Sources */,
 				011EA9E4286705890078D4CD /* TabBarViewController.swift in Sources */,
 				011EA9ED28671D160078D4CD /* ObjectTableViewCell.swift in Sources */,
 				011EA9BF286564410078D4CD /* OnBoardingViewController.swift in Sources */,
+				013458B52871AE5300BCAAE6 /* FinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +590,8 @@
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = learnEnglish/SupportingFiles/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "for inference";
+				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -543,7 +604,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rrdev.learnEnglish;
+				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -561,7 +622,8 @@
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = learnEnglish/SupportingFiles/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "for inference";
+				INFOPLIST_KEY_CFBundleDisplayName = ExploreCare;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -574,7 +636,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rrdev.learnEnglish;
+				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

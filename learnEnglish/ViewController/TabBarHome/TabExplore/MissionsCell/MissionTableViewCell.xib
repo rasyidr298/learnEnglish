@@ -100,11 +100,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZa-YB-4Av">
                                         <rect key="frame" x="13.5" y="4.5" width="57.5" height="11"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
-                                        <color key="textColor" name="mainColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.63137254899999995" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstItem="vZa-YB-4Av" firstAttribute="centerY" secondItem="FaY-uD-aoc" secondAttribute="centerY" id="3bs-2F-b8t"/>
                                     <constraint firstAttribute="height" constant="20" id="TnO-Ew-NOx"/>

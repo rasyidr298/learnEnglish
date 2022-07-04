@@ -27,15 +27,15 @@ extension Mission {
     static func dataObject() -> [Mission] {
         return [
             Mission(level: 1, isLockLevel: false, object: [
-                ObjectRecog(objectName: "sepatu", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard1")!),
-                ObjectRecog(objectName: "sandal", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard2")!),
-                ObjectRecog(objectName: "kaus kaki", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard3")!)
+                ObjectRecog(objectName: "backpack", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_backpack")!),
+                ObjectRecog(objectName: "tv", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_tv")!),
+                ObjectRecog(objectName: "clock", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_clock")!)
             ]),
             
             Mission(level: 2, isLockLevel: false, object: [
-                ObjectRecog(objectName: "piring", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard1")!),
-                ObjectRecog(objectName: "garpu", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard2")!),
-                ObjectRecog(objectName: "pisau", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_onboard3")!)
+                ObjectRecog(objectName: "book", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_book")!),
+                ObjectRecog(objectName: "laptop", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_laptop")!),
+                ObjectRecog(objectName: "cup", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_cup")!)
             ])
         ]
     }

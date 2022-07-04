@@ -13,7 +13,7 @@ class ObjectTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var objectImg: UIImageView!
     
-    public var object: ObjectRecog?
+    public var object: [ObjectRecog]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,13 +30,14 @@ class ObjectTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = 8
     }
     
-    public func updateObjectCell(itemIsMatch: Bool) {
-        objectImg.image = object?.objectImage
-        if itemIsMatch {
-            bgView.backgroundColor = object?.objectBgColor[1]
-        }else {
-            bgView.backgroundColor = object?.objectBgColor[0]
-        }
+    public func updateObjectCell(index: Int) {
+        objectImg.image = object?[index].objectImage
+        
+//        if itemIsMatch {
+//            bgView.backgroundColor = object[index].objectBgColor[1]
+//        }else {
+//            bgView.backgroundColor = object[index].objectBgColor[0]
+//        }
     }
     
 }
