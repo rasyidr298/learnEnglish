@@ -43,10 +43,10 @@
                     </subviews>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="7uf-yq-8R1">
-                    <rect key="frame" x="305" y="44" width="89" height="83"/>
+                    <rect key="frame" x="324" y="44" width="70" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="83" id="mfA-oS-V2F"/>
-                        <constraint firstAttribute="width" constant="89" id="nPl-s2-c3t"/>
+                        <constraint firstAttribute="height" constant="70" id="mfA-oS-V2F"/>
+                        <constraint firstAttribute="width" constant="70" id="nPl-s2-c3t"/>
                     </constraints>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8U-H6-AFD">

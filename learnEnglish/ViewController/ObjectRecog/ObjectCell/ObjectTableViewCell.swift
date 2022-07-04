@@ -9,35 +9,17 @@ import UIKit
 
 class ObjectTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var objectImg: UIImageView!
     
     public var object: [ObjectRecog]?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setupView()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    private func setupView() {
-        bgView.layer.cornerRadius = 8
-        containerView.layer.cornerRadius = 8
+    override func layoutSubviews() {
+        super.layoutSubviews()
+            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0.0, bottom: 5, right: 0.0))
     }
     
     public func updateObjectCell(index: Int) {
         objectImg.image = object?[index].objectImage
-        
-//        if itemIsMatch {
-//            bgView.backgroundColor = object[index].objectBgColor[1]
-//        }else {
-//            bgView.backgroundColor = object[index].objectBgColor[0]
-//        }
     }
     
 }

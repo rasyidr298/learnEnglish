@@ -26,3 +26,10 @@ func allert(view: UIViewController, title: String, message: String) {
         }))
     view.present(alert, animated: true, completion: nil)
 }
+
+extension Sequence where Element: Hashable {
+    func uniqued() -> [Element] {
+        var set = Set<Element>()
+        return filter { set.insert($0).inserted }
+    }
+}

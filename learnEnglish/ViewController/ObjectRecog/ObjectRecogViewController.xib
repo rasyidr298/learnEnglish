@@ -26,20 +26,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GuP-7L-tzW">
-                    <rect key="frame" x="699" y="0.0" width="197" height="413"/>
+                    <rect key="frame" x="705" y="0.0" width="172" height="414"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-f0-x74" userLabel="CameraView">
-                    <rect key="frame" x="0.0" y="0.0" width="691" height="414"/>
+                    <rect key="frame" x="0.0" y="0.0" width="697" height="414"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrA-Qx-oOA" customClass="DrawingBoundingBoxView" customModule="learnEnglish" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="691" height="414"/>
+                    <rect key="frame" x="0.0" y="0.0" width="697" height="414"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z4-ZX-xm8">
-                    <rect key="frame" x="589" y="25" width="100" height="35"/>
+                    <rect key="frame" x="575" y="25" width="100" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="sRi-bg-aAq"/>
                         <constraint firstAttribute="height" constant="35" id="vui-lB-O9e"/>
@@ -89,12 +89,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5MV-pl-tnS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="44" id="8g4-JN-STU"/>
+                <constraint firstItem="GuP-7L-tzW" firstAttribute="leading" secondItem="1z4-ZX-xm8" secondAttribute="trailing" constant="30" id="Dh5-gV-cOF"/>
                 <constraint firstItem="GuP-7L-tzW" firstAttribute="leading" secondItem="RrA-Qx-oOA" secondAttribute="trailing" constant="8" id="Exz-ng-KA9"/>
                 <constraint firstAttribute="bottom" secondItem="RrA-Qx-oOA" secondAttribute="bottom" id="JuU-kS-cN7"/>
                 <constraint firstItem="PIb-f0-x74" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KJh-4F-P5u"/>
                 <constraint firstItem="5MV-pl-tnS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="SiH-9h-gyf"/>
                 <constraint firstItem="PIb-f0-x74" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VGM-K9-s1g"/>
-                <constraint firstItem="GuP-7L-tzW" firstAttribute="leading" secondItem="1z4-ZX-xm8" secondAttribute="trailing" constant="10" id="ZOK-RO-3um"/>
                 <constraint firstItem="RrA-Qx-oOA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZSF-n7-aTB"/>
                 <constraint firstItem="1z4-ZX-xm8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="j4a-rB-RLZ"/>
                 <constraint firstItem="1JJ-zu-5yw" firstAttribute="leading" secondItem="5MV-pl-tnS" secondAttribute="trailing" constant="10" id="m65-x9-Fue"/>

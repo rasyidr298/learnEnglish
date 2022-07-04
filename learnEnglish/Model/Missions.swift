@@ -28,7 +28,7 @@ extension Mission {
         return [
             Mission(level: 1, isLockLevel: false, object: [
                 ObjectRecog(objectName: "backpack", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_backpack")!),
-                ObjectRecog(objectName: "tv", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_tv")!),
+                ObjectRecog(objectName: "tvmonitor", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_tv")!),
                 ObjectRecog(objectName: "clock", objectBgColor: [UIColor.white, UIColor.green], objectImage: UIImage(named: "ic_clock")!)
             ]),
             

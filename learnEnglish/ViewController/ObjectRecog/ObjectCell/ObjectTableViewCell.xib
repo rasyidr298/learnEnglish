@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,69 +12,45 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ObjectTableViewCell" rowHeight="156" id="KGk-i7-Jjw" customClass="ObjectTableViewCell" customModule="learnEnglish" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="151" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="151" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bo-C8-C0i">
-                        <rect key="frame" x="10" y="10" width="132" height="129"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBM-04-U10">
+                        <rect key="frame" x="0.0" y="0.0" width="151" height="156"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjk-2b-4BT">
-                                <rect key="frame" x="15" y="14" width="102" height="101"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZOS-rh-sp3">
-                                        <rect key="frame" x="13" y="13" width="76" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="76" id="lb4-GQ-hbw"/>
-                                            <constraint firstAttribute="width" constant="76" id="n8A-cb-6aO"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tv" translatesAutoresizingMaskIntoConstraints="NO" id="ZOS-rh-sp3">
+                                <rect key="frame" x="14.5" y="17" width="122" height="122"/>
                                 <constraints>
-                                    <constraint firstItem="ZOS-rh-sp3" firstAttribute="leading" secondItem="Xjk-2b-4BT" secondAttribute="leading" constant="13" id="7j3-OZ-HFS"/>
-                                    <constraint firstAttribute="height" constant="101" id="Axg-Gw-06c"/>
-                                    <constraint firstItem="ZOS-rh-sp3" firstAttribute="top" secondItem="Xjk-2b-4BT" secondAttribute="top" constant="12.5" id="H1Z-Eb-16L"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZOS-rh-sp3" secondAttribute="bottom" constant="12.5" id="aG7-4n-oau"/>
-                                    <constraint firstAttribute="width" constant="102" id="ffH-N7-sgD"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZOS-rh-sp3" secondAttribute="trailing" constant="13" id="yTy-9j-EYo"/>
+                                    <constraint firstAttribute="height" constant="122" id="N98-sY-Mw3"/>
+                                    <constraint firstAttribute="width" constant="122" id="ciH-k5-Ql9"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Xjk-2b-4BT" firstAttribute="top" secondItem="5bo-C8-C0i" secondAttribute="top" constant="14" id="7qC-pE-OmZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Xjk-2b-4BT" secondAttribute="trailing" constant="15" id="Q77-C8-ALi"/>
-                            <constraint firstAttribute="bottom" secondItem="Xjk-2b-4BT" secondAttribute="bottom" constant="14" id="RPN-5U-jiZ"/>
-                            <constraint firstItem="Xjk-2b-4BT" firstAttribute="leading" secondItem="5bo-C8-C0i" secondAttribute="leading" constant="15" id="RQb-ug-0MW"/>
-                            <constraint firstAttribute="height" constant="129" id="S8Y-jt-cBU"/>
-                            <constraint firstAttribute="width" constant="132" id="ehC-ZD-585"/>
+                            <constraint firstItem="ZOS-rh-sp3" firstAttribute="centerY" secondItem="CBM-04-U10" secondAttribute="centerY" id="4qx-Od-xlb"/>
+                            <constraint firstItem="ZOS-rh-sp3" firstAttribute="centerX" secondItem="CBM-04-U10" secondAttribute="centerX" id="Hhy-48-wjh"/>
+                            <constraint firstAttribute="height" constant="156" id="Srp-Rt-6WV"/>
+                            <constraint firstAttribute="width" constant="151" id="hzj-Sc-7gf"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5bo-C8-C0i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BZw-aI-CVi"/>
-                    <constraint firstItem="5bo-C8-C0i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="P83-i0-WtM"/>
-                    <constraint firstAttribute="bottom" secondItem="5bo-C8-C0i" secondAttribute="bottom" constant="10" id="ZGk-8P-beg"/>
-                    <constraint firstAttribute="trailing" secondItem="5bo-C8-C0i" secondAttribute="trailing" constant="10" id="kY7-td-r2y"/>
+                    <constraint firstItem="CBM-04-U10" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cv5-1G-hN5"/>
+                    <constraint firstItem="CBM-04-U10" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Fmt-T2-a4D"/>
+                    <constraint firstAttribute="bottom" secondItem="CBM-04-U10" secondAttribute="bottom" id="IBt-Gd-f3L"/>
+                    <constraint firstAttribute="trailing" secondItem="CBM-04-U10" secondAttribute="trailing" id="Xdc-fe-it7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="bgView" destination="Xjk-2b-4BT" id="gTz-wH-UAc"/>
-                <outlet property="containerView" destination="5bo-C8-C0i" id="AS8-ug-QCx"/>
                 <outlet property="objectImg" destination="ZOS-rh-sp3" id="43q-7Y-UlB"/>
             </connections>
-            <point key="canvasLocation" x="9.4202898550724647" y="151.33928571428569"/>
+            <point key="canvasLocation" x="9.4202898550724647" y="150.66964285714286"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="ic_tv" width="80" height="60"/>
     </resources>
 </document>

@@ -13,6 +13,8 @@ class FinishViewController: UIViewController {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
+    public var mission: Mission?
+    
     public var level = 0
     
     override func viewDidLoad() {
@@ -29,6 +31,10 @@ class FinishViewController: UIViewController {
     }
     
     @IBAction func playAgainButton(_ sender: Any) {
+        guard let window = UIApplication.shared.keyWindow else {return}
+        let vc = ObjectRecogViewController()
+        vc.mission = self.mission
+        window.rootViewController = vc
     }
     
     @IBAction func finishButton(_ sender: Any) {

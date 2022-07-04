@@ -24,7 +24,6 @@ class ObjectRecogViewController: UIViewController {
     
     // MARK: - Init Model Core ML
     let objectDectectionModel = YOLOv3Tiny()
-    var predictions: [VNRecognizedObjectObservation] = []
     
     // MARK: - Vision Properties
     var request: VNCoreMLRequest?
@@ -36,9 +35,11 @@ class ObjectRecogViewController: UIViewController {
     let semaphore = DispatchSemaphore(value: 1)
     var lastExecution = Date()
     
-    var confettiCouter = 2
+    var timer = Timer()
+    var confettiCouter = 60
     var matchIndex = 0
     let confettiView = KConfettiView()
+    var indexList: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,61 +53,6 @@ class ObjectRecogViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         resizePreviewLayer()
-    }
-    
-    func setupView() {
-        bgLevelView.layer.cornerRadius = 12
-        AppUtility.lockOrientation(.landscapeRight)
-        levelLabel.text = "Level \(mission?.level ?? 0)"
-        finishButton.isHidden = true
-    }
-    
-    func resizePreviewLayer() {
-        videoCapture.previewLayer?.frame = cameraView.bounds
-    }
-    
-    func stopConfetti() {
-        confettiView.removeFromSuperview()
-        finishButton.isHidden = false
-    }
-    
-    func showConfetti() {
-        confettiView.frame = view.frame
-        confettiView.setup()
-        view.addSubview(confettiView)
-    }
-    
-    func showCustomAllert(indexObject: Int) {
-        let customAllert = CustomAllertViewController()
-        customAllert.allertTitle = (mission?.object[indexObject].objectName)!
-        customAllert.allertNegativeButtonTitle = "Back"
-        customAllert.allertPositiveButtonTitle = "Speaker"
-        customAllert.indexObject = indexObject
-        customAllert.allertImage = mission?.object[indexObject].objectImage
-        customAllert.delegate = self
-        customAllert.show()
-    }
-    
-    func playObjectSound(indexObject: Int) {
-        switch mission?.object[indexObject].objectName {
-        case "backpack": playSound(soundName: "backpack.mp3")
-        case "tv": playSound(soundName: "tv.mp3")
-        case "clock": playSound(soundName: "clock.mp3")
-        case "book": playSound(soundName: "book.mp3")
-        case "laptop": playSound(soundName: "laptop.mp3")
-        case "cup": playSound(soundName: "cup.mp3")
-        default:
-            playSound(soundName: "laptop.mp3")
-        }
-    }
-    
-    @objc func updateCounter() {
-        if confettiCouter > 0 {
-            print("\(confettiCouter) show confetti")
-            confettiCouter -= 1
-        }else {
-            stopConfetti()
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -131,6 +77,8 @@ class ObjectRecogViewController: UIViewController {
     @IBAction func finishButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
         let vc = FinishViewController()
+        vc.mission = self.mission
+        vc.level = mission?.level ?? 0
         window.rootViewController = vc
     }
 }
@@ -211,23 +159,15 @@ extension ObjectRecogViewController {
             //matching object
             mission?.object.map({ object in
                 if object.objectName == predictions.first?.labels.first?.identifier {
-                    
-                    let index = mission?.object.enumerated().filter{$0.element.objectName == "laptop"}.map{$0.offset}
                     matchIndex += 1
                     
+                    let index = mission?.object.enumerated().filter{$0.element.objectName == object.objectName}.map{$0.offset}
                     if matchIndex == 1 {
-                        DispatchQueue.main.async { [self] in
-                            showConfetti()
-                            showCustomAllert(indexObject: (index?.first)!)
-                            playSound(soundName: "correct.aiff")
-                            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-                        }
-                        
+                        matchingObject(indexObject: (index?.first)!)
                     }
                 }
             })
             
-            self.predictions = predictions
             DispatchQueue.main.async {
                 self.boxesCameraView.predictedObjects = predictions
                 //                self.labelsTableView.reloadData()
@@ -275,17 +215,101 @@ extension ObjectRecogViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("name object :" , mission?.object[indexPath.row].objectName ?? "")
+        let selectedCell:UITableViewCell = self.objectTableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.layer.cornerRadius = 12
+        selectedCell.contentView.backgroundColor = .green
+        
         playObjectSound(indexObject: indexPath.row)
     }
 }
 
 // MARK: - CustomAllert
 extension ObjectRecogViewController: CustomAlertDelegate {
-    func onNegativeButtonPressed(_ alert: CustomAllertViewController) {}
+    func onNegativeButtonPressed(_ alert: CustomAllertViewController, indexObject: Int) {
+        matchIndex = 0
+        timer.invalidate()
+        stopConfetti()
+        
+        indexList.append(indexObject)
+        if indexList.uniqued().count == 3 {
+            finishButton.isHidden = false
+        }
+    }
     
     func onPositiveButttonPressed(_ alert: CustomAllertViewController, indexObject: Int) {
         playObjectSound(indexObject: indexObject)
     }
 }
 
+// MARK: - Custom function
+extension ObjectRecogViewController {
+    
+    @objc func updateCounter() {
+        if confettiCouter > 0 {
+            print("\(confettiCouter) show confetti")
+            confettiCouter -= 1
+        }else {
+            stopConfetti()
+        }
+    }
+    
+    func setupView() {
+        bgLevelView.layer.cornerRadius = 8
+        AppUtility.lockOrientation(.landscapeRight)
+        levelLabel.text = "Level \(mission?.level ?? 0)"
+        finishButton.isHidden = true
+        objectTableView.allowsSelection = false
+    }
+    
+    func resizePreviewLayer() {
+        videoCapture.previewLayer?.frame = cameraView.bounds
+    }
+    
+    func stopConfetti() {
+        confettiView.removeFromSuperview()
+    }
+    
+    func showConfetti() {
+        confettiView.frame = view.bounds
+        confettiView.setup()
+        view.addSubview(confettiView)
+    }
+    
+    func showCustomAllert(indexObject: Int) {
+        let customAllert = CustomAllertViewController()
+        customAllert.allertTitle = (mission?.object[indexObject].objectName)!
+        customAllert.allertNegativeButtonTitle = "Back"
+        customAllert.allertPositiveButtonTitle = "Speaker"
+        customAllert.indexObject = indexObject
+        customAllert.allertImage = mission?.object[indexObject].objectImage
+        customAllert.delegate = self
+        customAllert.show()
+    }
+    
+    func playObjectSound(indexObject: Int) {
+        switch mission?.object[indexObject].objectName {
+        case "backpack": playSound(soundName: "backpack.mp3")
+        case "tvmonitor": playSound(soundName: "tv.mp3")
+        case "clock": playSound(soundName: "clock.mp3")
+        case "book": playSound(soundName: "book.mp3")
+        case "laptop": playSound(soundName: "laptop.mp3")
+        case "cup": playSound(soundName: "cup.mp3")
+        default:
+            playSound(soundName: "laptop.mp3")
+        }
+    }
+    
+    func matchingObject(indexObject: Int) {
+        DispatchQueue.main.async { [self] in
+            //selected row
+            let indexPath = IndexPath(row: indexObject, section: 0)
+            objectTableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+            objectTableView.delegate?.tableView?(objectTableView, didSelectRowAt: indexPath)
+            
+            showConfetti()
+            showCustomAllert(indexObject: indexObject)
+            playSound(soundName: "correct.aiff")
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        }
+    }
+}

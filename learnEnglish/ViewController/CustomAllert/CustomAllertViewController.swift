@@ -9,7 +9,7 @@ import UIKit
 
 protocol CustomAlertDelegate: class {
     func onPositiveButttonPressed(_ alert: CustomAllertViewController, indexObject: Int)
-    func onNegativeButtonPressed(_ alert: CustomAllertViewController)
+    func onNegativeButtonPressed(_ alert: CustomAllertViewController, indexObject: Int)
 }
 
 class CustomAllertViewController: UIViewController {
@@ -59,7 +59,7 @@ class CustomAllertViewController: UIViewController {
     
     @IBAction func negativeButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        delegate?.onNegativeButtonPressed(self)
+        delegate?.onNegativeButtonPressed(self, indexObject: indexObject)
     }
 
     func setupView() {
