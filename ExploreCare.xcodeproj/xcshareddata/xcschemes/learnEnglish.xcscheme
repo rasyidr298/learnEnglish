@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "01554D2F28617159008AEA27"
-               BuildableName = "learnEnglish.app"
+               BuildableName = "ExploreCare.app"
                BlueprintName = "ExploreCare"
                ReferencedContainer = "container:ExploreCare.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01554D2F28617159008AEA27"
-            BuildableName = "learnEnglish.app"
+            BuildableName = "ExploreCare.app"
             BlueprintName = "ExploreCare"
             ReferencedContainer = "container:ExploreCare.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01554D2F28617159008AEA27"
-            BuildableName = "learnEnglish.app"
+            BuildableName = "ExploreCare.app"
             BlueprintName = "ExploreCare"
             ReferencedContainer = "container:ExploreCare.xcodeproj">
          </BuildableReference>

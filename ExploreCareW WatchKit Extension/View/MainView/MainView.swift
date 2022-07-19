@@ -11,7 +11,7 @@ struct MainView: View {
     let screenSize = WKInterfaceDevice.current().screenBounds.size
     
     @State var user = "Rachel"
-    @State var timerVal = 0
+    @State var timerVal = 1
     @State var isMute = false
     
     var body: some View {
