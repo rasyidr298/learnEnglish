@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftUI
+import CoreMedia
 
 class TabExploreViewController: UIViewController, UIScrollViewDelegate {
 
@@ -18,6 +20,11 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tableWidth: NSLayoutConstraint!
     
     private var listObject: [Mission] = []
+    
+    var timer = Timer()
+    var timerCounter = 1
+    
+    @AppStorage("totalRunning") var showRunning = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +44,22 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
         //no need to write following if checked in storyboard
         self.uiScrollView.bounces = false
         self.missionTableView.bounces = true
+        
+        if (showRunning) > 0 {
+            timerCounter += showRunning
+        }
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounter() {
+        if timerCounter > 0 {
+            print("\(timerCounter) show confetti")
+            timerCounter += 1
+            UserDefaults.standard.set(timerCounter, forKey: "totalRunning")
+            //print(showRunning)
+        }else {
+            //stopConfetti()
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
