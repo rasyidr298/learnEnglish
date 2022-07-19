@@ -12,14 +12,15 @@ struct ReviewView: View {
     @AppStorage("userName") var user = "";
     @State var progressValue: Float = 0.40
     @State var openAppCount = 10
-//    @State var openAppCount = UserDefaults.standard.integer(forKey: "totalDays")
+    //@State var openAppCount = UserDefaults.standard.integer(forKey: "totalDays")
     @State var totalObjects: Int = 6
     
-    @State private var showingGame = false
-//    @Binding var selectedTab: Int
+    //@State private var showingGame = false
+    //@Binding var selectedTab: Int
+    
+    @AppStorage("totalRunning") var showRunning = 0;
     
     var body: some View {
-        
         VStack(alignment: .leading) {
             Text("Hallo Parents,")
                 .font(.title)
@@ -84,12 +85,17 @@ struct ReviewView: View {
                             .opacity(0.35)
                             .frame(maxHeight: 130)
                         VStack {
+                            let (h,m,_) = secondsToHoursMinutesSeconds(showRunning)
+                            //print ("\(h) Hours, \(m) Minutes, \(s) Seconds")
+                            
                             Text("Time Spent")
                                 .font(.title2)
                                 .bold()
-                            Text(" 5 h 33m")
-                                .font(.largeTitle)
+                            Text(String(h)+"hr "+String(m)+"min")
+                                .font(.headline)
                                 .bold()
+                        }.onAppear() {
+                            //print(showRunning)
                         }
                     }
                 }
@@ -135,8 +141,6 @@ struct ReviewView: View {
             //NavigationLink(destination: MainView().navigationBarBackButtonHidden(true)) {
             Button("Keep exploring to improve children’s capability") {
                 print("Button pressed!")
-                //                    showingGame = true
-//                selectedTab = 1
             }
             .frame(maxWidth: .infinity - 20, maxHeight: 50, alignment: .center)
             .font(.subheadline)
@@ -148,6 +152,10 @@ struct ReviewView: View {
             
             Spacer()
         }
+    }
+
+    func secondsToHoursMinutesSeconds(_ seconds: Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
 }
 
