@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0116AC2628855A0000840F81 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC2528855A0000840F81 /* RingView.swift */; };
+		0116AC282885BACF00840F81 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC272885BACE00840F81 /* AVService.swift */; };
+		0116AC2C2885BB5500840F81 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
+		0116AC2E2885BB5700840F81 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
 		011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */; };
 		011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9B32864E4750078D4CD /* AppUtility.swift */; };
 		011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingViewController.xib */; };
@@ -49,7 +52,7 @@
 		0186D10F287FC2BF006540C1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186D10E287FC2BF006540C1 /* ComplicationController.swift */; };
 		0186D111287FC2C0006540C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0186D110287FC2C0006540C1 /* Assets.xcassets */; };
 		0186D114287FC2C0006540C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0186D113287FC2C0006540C1 /* Preview Assets.xcassets */; };
-		0186D119287FC2C0006540C1 /* ExploreCareW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0186D0F9287FC2BE006540C1 /* ExploreCareW.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0186D119287FC2C0006540C1 /* ExploreCare.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0186D0F9287FC2BE006540C1 /* ExploreCare.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		01B972482872851A007F1521 /* correct.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 01B972472872851A007F1521 /* correct.aiff */; };
 		01B9724F28729921007F1521 /* cup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724928729920007F1521 /* cup.mp3 */; };
 		01B9725028729921007F1521 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
@@ -86,7 +89,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				0186D119287FC2C0006540C1 /* ExploreCareW.app in Embed Watch Content */,
+				0186D119287FC2C0006540C1 /* ExploreCare.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		0116AC2528855A0000840F81 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		0116AC272885BACE00840F81 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
 		011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogViewController.xib; sourceTree = "<group>"; };
 		011EA9B32864E4750078D4CD /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		011EA9B6286562580078D4CD /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
@@ -140,7 +144,7 @@
 		01554D3C2861715A008AEA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01554D3F2861715A008AEA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01554D412861715A008AEA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0186D0F9287FC2BE006540C1 /* ExploreCareW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExploreCareW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0186D0F9287FC2BE006540C1 /* ExploreCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExploreCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0186D0FB287FC2BF006540C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0186D101287FC2BF006540C1 /* ExploreCareW WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ExploreCareW WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0186D106287FC2BF006540C1 /* learnEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnEnglishApp.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		0116AC1A288242B800840F81 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				0116AC2B2885BB2800840F81 /* music */,
 				0186D112287FC2C0006540C1 /* Preview Content */,
 				0186D115287FC2C0006540C1 /* Info.plist */,
 				0186D110287FC2C0006540C1 /* Assets.xcassets */,
@@ -199,11 +204,12 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		0116AC1B288242C200840F81 /* Utils */ = {
+		0116AC1B288242C200840F81 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0116AC272885BACE00840F81 /* AVService.swift */,
 			);
-			path = Utils;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		0116AC1C288242C900840F81 /* App */ = {
@@ -241,6 +247,13 @@
 				0116AC2528855A0000840F81 /* RingView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		0116AC2B2885BB2800840F81 /* music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = music;
 			sourceTree = "<group>";
 		};
 		011EA9B5286561E90078D4CD /* OnBoarding */ = {
@@ -365,9 +378,9 @@
 		013458AB287050AA00BCAAE6 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				01B9724A28729920007F1521 /* backpack.mp3 */,
 				01B9724B28729920007F1521 /* book.mp3 */,
 				01B9724C28729921007F1521 /* clock.mp3 */,
+				01B9724A28729920007F1521 /* backpack.mp3 */,
 				01B9724928729920007F1521 /* cup.mp3 */,
 				01B9724D28729921007F1521 /* laptop.mp3 */,
 				01B9724E28729921007F1521 /* tv.mp3 */,
@@ -399,7 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				01554D3028617159008AEA27 /* ExploreCare.app */,
-				0186D0F9287FC2BE006540C1 /* ExploreCareW.app */,
+				0186D0F9287FC2BE006540C1 /* ExploreCare.app */,
 				0186D101287FC2BF006540C1 /* ExploreCareW WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -477,7 +490,7 @@
 			children = (
 				0116AC1D288242D000840F81 /* View */,
 				0116AC1C288242C900840F81 /* App */,
-				0116AC1B288242C200840F81 /* Utils */,
+				0116AC1B288242C200840F81 /* Shared */,
 				0116AC1A288242B800840F81 /* SupportingFiles */,
 				0116AC19288242B200840F81 /* Model */,
 			);
@@ -537,7 +550,7 @@
 			);
 			name = ExploreCareW;
 			productName = ExploreCareW;
-			productReference = 0186D0F9287FC2BE006540C1 /* ExploreCareW.app */;
+			productReference = 0186D0F9287FC2BE006540C1 /* ExploreCare.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		0186D100287FC2BF006540C1 /* ExploreCareW WatchKit Extension */ = {
@@ -629,6 +642,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0116AC2E2885BB5700840F81 /* backpack.mp3 in Resources */,
 				0186D0FC287FC2BF006540C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +651,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0116AC2C2885BB5500840F81 /* backpack.mp3 in Resources */,
 				0186D114287FC2C0006540C1 /* Preview Assets.xcassets in Resources */,
 				0186D111287FC2C0006540C1 /* Assets.xcassets in Resources */,
 			);
@@ -682,6 +697,7 @@
 				0186D10B287FC2BF006540C1 /* NotificationController.swift in Sources */,
 				0186D109287FC2BF006540C1 /* MainView.swift in Sources */,
 				0186D10F287FC2BF006540C1 /* ComplicationController.swift in Sources */,
+				0116AC282885BACF00840F81 /* AVService.swift in Sources */,
 				0116AC2628855A0000840F81 /* RingView.swift in Sources */,
 				0186D107287FC2BF006540C1 /* learnEnglishApp.swift in Sources */,
 				0186D10D287FC2BF006540C1 /* NotificationView.swift in Sources */,
@@ -901,20 +917,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = exploreCareIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ExploreCareW_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = ExploreCareW;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = rrdev.ExploreCare;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ExploreCare;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -928,20 +944,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = exploreCareIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DA8L68M7F2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ExploreCareW_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = ExploreCareW;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = rrdev.ExploreCare;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rrdev.ExploreCare.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ExploreCare;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

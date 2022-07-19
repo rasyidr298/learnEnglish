@@ -55,6 +55,7 @@ struct PercentageRing: View {
     private static let ShadowRadius: CGFloat = 5
     private static let ShadowOffsetMultiplier: CGFloat = ShadowRadius + 2
     
+    private let ringInnerWidth: CGFloat
     private let ringWidth: CGFloat
     private let percent: Double
     private let backgroundColor: Color
@@ -85,7 +86,8 @@ struct PercentageRing: View {
         )
     }
     
-    init(ringWidth: CGFloat, percent: Double, backgroundColor: Color, foregroundColors: [Color]) {
+    init(ringInnerWidth: CGFloat, ringWidth: CGFloat, percent: Double, backgroundColor: Color, foregroundColors: [Color]) {
+        self.ringInnerWidth = ringInnerWidth
         self.ringWidth = ringWidth
         self.percent = percent
         self.backgroundColor = backgroundColor
@@ -97,7 +99,7 @@ struct PercentageRing: View {
             ZStack {
                 // Background for the ring
                 RingShapee()
-                    .stroke(style: StrokeStyle(lineWidth: self.ringWidth))
+                    .stroke(style: StrokeStyle(lineWidth: self.ringInnerWidth))
                     .fill(self.backgroundColor)
                 // Foreground
                 RingShapee(percent: self.percent, startAngle: self.startAngle)
@@ -153,7 +155,7 @@ struct PercentageRing: View {
 struct PreviewView: PreviewProvider {
     static var previews: some View {
         PercentageRing(
-            ringWidth: 20, percent: 50.0 ,
+            ringInnerWidth: 20, ringWidth: 22, percent: 50.0 ,
             backgroundColor: Color.green.opacity(0.2),
             foregroundColors: [.green, .blue]
         )
