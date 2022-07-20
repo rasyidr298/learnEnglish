@@ -21,10 +21,13 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     
     private var listObject: [Mission] = []
     
+    //For Timer
     var timer = Timer()
     var timerCounter = 1
-    
     @AppStorage("totalRunning") var showRunning = 0;
+    
+    //For count days use apps
+    var openAppCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +48,14 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
         self.uiScrollView.bounces = false
         self.missionTableView.bounces = true
         
+        //For Timer
         if (showRunning) > 0 {
             timerCounter += showRunning
         }
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        
+        //Count Days in here
+        forCountingDays()
     }
     
     @objc func updateCounter() {
@@ -59,6 +66,33 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
             //print(showRunning)
         }else {
             //stopConfetti()
+        }
+    }
+    
+    func forCountingDays() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .full
+        //print(formatter.string(from: .now))
+        formatter.setLocalizedDateFormatFromTemplate("dd-MM-yyyy")
+        let todayToString = formatter.string(from: .now)
+        //print(todayToString)
+        print(openAppCount)
+        if(showRunning) == 0 {
+            openAppCount += 1
+            UserDefaults.standard.set(openAppCount, forKey: "totalDays")
+            UserDefaults.standard.set(todayToString, forKey: "latestDate")
+        }
+        else {
+            @AppStorage("totalDays") var openAppCount = 0;
+            print(openAppCount)
+            @State var latestDateToString = UserDefaults.standard.string(forKey: "latestDate")
+            
+            if(todayToString != latestDateToString) {
+                openAppCount += 1
+                UserDefaults.standard.set(openAppCount, forKey: "totalDays")
+                UserDefaults.standard.set(todayToString, forKey: "latestDate")
+            }
         }
     }
     

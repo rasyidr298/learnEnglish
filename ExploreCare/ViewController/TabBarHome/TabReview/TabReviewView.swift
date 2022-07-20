@@ -11,8 +11,7 @@ import SwiftUI
 struct ReviewView: View {
     @AppStorage("userName") var user = "";
     @State var progressValue: Float = 0.40
-    @State var openAppCount = 10
-    //@State var openAppCount = UserDefaults.standard.integer(forKey: "totalDays")
+    @State var openAppCount = UserDefaults.standard.integer(forKey: "totalDays")
     @State var totalObjects: Int = 6
     
     //@State private var showingGame = false
@@ -81,13 +80,12 @@ struct ReviewView: View {
                     // Total Time Spent
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(.secondary)
+                            .fill(.green)
                             .opacity(0.35)
                             .frame(maxHeight: 130)
                         VStack {
                             let (h,m,_) = secondsToHoursMinutesSeconds(showRunning)
                             //print ("\(h) Hours, \(m) Minutes, \(s) Seconds")
-                            
                             Text("Time Spent")
                                 .font(.title2)
                                 .bold()
@@ -159,16 +157,6 @@ struct ReviewView: View {
     }
 }
 
-struct GrowingButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundColor(.black)
-            .clipShape(Capsule())
-            .scaleEffect(configuration.isPressed ? 1.2 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
-    }
-}
-
 struct ProgressBar: View {
     @Binding var progress: Float
     
@@ -198,6 +186,16 @@ struct ProgressBar: View {
     }
 }
 
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundColor(.black)
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+    }
+}
+
 struct ReviewView_Previews: PreviewProvider {
     @State static var selectedTab: Int = 0
     
@@ -208,10 +206,10 @@ struct ReviewView_Previews: PreviewProvider {
             ReviewView()
                 .preferredColorScheme(.dark)
             
-//            ReviewView(selectedTab: $selectedTab)
-//                .preferredColorScheme(.light)
-//            ReviewView(selectedTab: $selectedTab)
-//                .preferredColorScheme(.dark)
+            /*ReviewView(selectedTab: $selectedTab)
+                .preferredColorScheme(.light)
+            ReviewView(selectedTab: $selectedTab)
+                .preferredColorScheme(.dark)*/
         }
     }
 }
