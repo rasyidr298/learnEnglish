@@ -44,6 +44,7 @@
 		01554D3428617159008AEA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01554D3328617159008AEA27 /* AppDelegate.swift */; };
 		01554D3D2861715A008AEA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3C2861715A008AEA27 /* Assets.xcassets */; };
 		01554D402861715A008AEA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01554D3E2861715A008AEA27 /* LaunchScreen.storyboard */; };
+		0157CA642887A7BA0008B287 /* TimerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157CA632887A7BA0008B287 /* TimerEngine.swift */; };
 		0186D0FC287FC2BF006540C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0186D0FB287FC2BF006540C1 /* Assets.xcassets */; };
 		0186D102287FC2BF006540C1 /* ExploreCareW WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0186D101287FC2BF006540C1 /* ExploreCareW WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0186D107287FC2BF006540C1 /* learnEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186D106287FC2BF006540C1 /* learnEnglishApp.swift */; };
@@ -146,6 +147,7 @@
 		01554D3C2861715A008AEA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01554D3F2861715A008AEA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01554D412861715A008AEA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0157CA632887A7BA0008B287 /* TimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngine.swift; sourceTree = "<group>"; };
 		0186D0F9287FC2BE006540C1 /* ExploreCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExploreCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0186D0FB287FC2BF006540C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0186D101287FC2BF006540C1 /* ExploreCareW WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ExploreCareW WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 		0116AC1B288242C200840F81 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0157CA632887A7BA0008B287 /* TimerEngine.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 			files = (
 				0186D10B287FC2BF006540C1 /* NotificationController.swift in Sources */,
 				0186D109287FC2BF006540C1 /* MainView.swift in Sources */,
+				0157CA642887A7BA0008B287 /* TimerEngine.swift in Sources */,
 				0116AC312886E25E00840F81 /* MainViewModel.swift in Sources */,
 				0116AC332886ED1C00840F81 /* HapticsView.swift in Sources */,
 				0186D10F287FC2BF006540C1 /* ComplicationController.swift in Sources */,

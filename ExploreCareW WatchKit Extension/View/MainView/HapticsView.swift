@@ -10,69 +10,69 @@ import SwiftUI
 
 
 //testView
-struct TestView: View {
+struct HapticsView: View {
     var body: some View {
         List {
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.notification)
-            //            } label: {
-            //                Text("notification")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.directionUp)
-            //            } label: {
-            //                Text("directionUp")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.directionDown)
-            //            } label: {
-            //                Text("directionDown")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.success)
-            //            } label: {
-            //                Text("success")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.failure)
-            //            } label: {
-            //                Text("failure")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.retry)
-            //            } label: {
-            //                Text("retry")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.start)
-            //            } label: {
-            //                Text("start")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.stop)
-            //            } label: {
-            //                Text("stop")
-            //            }
-            //            Button {
-            //                WKInterfaceDevice.current().play(WKHapticType.click)
-            //            } label: {
-            //                Text("click")
-            //            }
             Button {
-                WKInterfaceDevice.current().play(WKHapticType.navigationLeftTurn)
+                WKInterfaceDevice.current().play(WKHapticType.notification)
             } label: {
-                Text("navigationLeftTurn")
+                Text("notification")
             }
             Button {
-                WKInterfaceDevice.current().play(WKHapticType.navigationRightTurn)
+                WKInterfaceDevice.current().play(WKHapticType.directionUp)
             } label: {
-                Text("navigationRightTurn")
+                Text("directionUp")
             }
             Button {
-                WKInterfaceDevice.current().play(WKHapticType.navigationGenericManeuver)
+                WKInterfaceDevice.current().play(WKHapticType.directionDown)
             } label: {
-                Text("navigationGenericManeuver")
+                Text("directionDown")
             }
+            Button {
+                WKInterfaceDevice.current().play(WKHapticType.success)
+            } label: {
+                Text("success")
+            }
+            Button {
+                WKInterfaceDevice.current().play(WKHapticType.failure)
+            } label: {
+                Text("failure")
+            }
+            Button {
+                WKInterfaceDevice.current().play(WKHapticType.retry)
+            } label: {
+                Text("retry")
+            }
+            Button {
+                WKInterfaceDevice.current().play(WKHapticType.start)
+            } label: {
+                Text("start")
+            }
+            Button {
+                WKInterfaceDevice.current().play(WKHapticType.stop)
+            } label: {
+                Text("stop")
+            }
+            Button {
+                WKInterfaceDevice.current().play(WKHapticType.click)
+            } label: {
+                Text("click")
+            }
+            //            Button {
+            //                WKInterfaceDevice.current().play(WKHapticType.navigationLeftTurn)
+            //            } label: {
+            //                Text("navigationLeftTurn")
+            //            }
+            //            Button {
+            //                WKInterfaceDevice.current().play(WKHapticType.navigationRightTurn)
+            //            } label: {
+            //                Text("navigationRightTurn")
+            //            }
+            //            Button {
+            //                WKInterfaceDevice.current().play(WKHapticType.navigationGenericManeuver)
+            //            } label: {
+            //                Text("navigationGenericManeuver")
+            //            }
             
         }
     }

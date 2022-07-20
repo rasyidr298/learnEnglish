@@ -21,36 +21,30 @@ struct WatchView: View {
     @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
-        if viewModel.timeVal > 0 {
-            ZStack {
-                soundMode(viewModel: viewModel)
-                VStack {
-                    Text("\(viewModel.name) Is \n Exploring")
-                        .font(.title3)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 40, height: 15, alignment: .center)
-                            .cornerRadius(5)
-                            .foregroundColor(ringColor(time: viewModel.timeVal).1.last)
-                        Text(timeString(time: viewModel.timeVal))
-                            .font(.system(size: 9, weight: .bold, design: .serif))
-                    }
+        ZStack {
+            soundMode(viewModel: viewModel)
+            VStack {
+                Text("\(viewModel.name) Is \n Exploring")
+                    .font(.title3)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                ZStack {
+                    Rectangle()
+                        .frame(width: 40, height: 15, alignment: .center)
+                        .cornerRadius(5)
+                        .foregroundColor(ringColor(time: viewModel.timeVal).1.last)
+                    Text(timeString(time: viewModel.timeVal))
+                        .font(.system(size: 9, weight: .bold, design: .serif))
                 }
-                PercentageRing(
-                    ringInnerWidth: 20, ringWidth: 23, percent: Double(viewModel.timeVal) ,
-                    backgroundColor: ringColor(time: viewModel.timeVal).0,
-                    foregroundColors: ringColor(time: viewModel.timeVal).1
-                )
-                .frame(width: screenSize.width - 22, height: screenSize.height - 22)
-                .onAppear() {
-                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                        if viewModel.timeVal > 0 {
-                            viewModel.timeVal += 1
-                        }
-                    }
-                }
+            }
+            PercentageRing(
+                ringInnerWidth: 20, ringWidth: 23, percent: Double(viewModel.timeVal) ,
+                backgroundColor: ringColor(time: viewModel.timeVal).0,
+                foregroundColors: ringColor(time: viewModel.timeVal).1
+            )
+            .frame(width: screenSize.width - 22, height: screenSize.height - 22)
+            .onAppear() {
+                TimerEngine.shared.startPlayinTicks(viewModel: viewModel)
             }
         }
     }
@@ -70,12 +64,18 @@ struct SoundButton: View {
                     .frame(width: 39, height: 39, alignment: .center)
                     .onTapGesture {
                         viewModel.isMute.toggle()
+                        if viewModel.isMute {
+                            TimerEngine.shared.stopPlayingTicks(type: 1)
+                        }else {
+                            TimerEngine.shared.startPlayinTicks(viewModel: viewModel)
+                        }
                     }
             }
         }
     }
 }
 
+//set timer enum
 enum TimeMode {
     static let green = 0...3
     static let yellow = 4...6
@@ -87,35 +87,11 @@ enum TimeMode {
 func soundMode(viewModel: MainViewModel) -> AnyView? {
     switch viewModel.timeVal {
     case TimeMode.green: print("")
-    case TimeMode.yellow: watchHaptic(type: 1)
-    case TimeMode.red: do {
-        if viewModel.isMute {
-            watchHaptic(type: 3)
-        }else {
-            watchHaptic(type: 2)
-        }
-        return AnyView(SoundButton(viewModel: viewModel))
-    }
-    default: do {
-        if viewModel.isMute {
-            watchHaptic(type: 3)
-        }else {
-            watchHaptic(type: 2)
-        }
-        return AnyView(SoundButton(viewModel: viewModel))
-    }
+    case TimeMode.yellow: print("")
+    case TimeMode.red: return AnyView(SoundButton(viewModel: viewModel))
+    default:return AnyView(SoundButton(viewModel: viewModel))
     }
     return nil
-}
-
-//haptics
-func watchHaptic(type: Int) {
-    switch type {
-    case 1: WKInterfaceDevice.current().play(WKHapticType.start)
-    case 2: WKInterfaceDevice.current().play(WKHapticType.directionUp)
-    case 3: WKInterfaceDevice.current().play(WKHapticType.navigationGenericManeuver)
-    default: print("")
-    }
 }
 
 //ringcolor

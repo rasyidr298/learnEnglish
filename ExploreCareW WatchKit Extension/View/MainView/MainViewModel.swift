@@ -10,5 +10,6 @@ import Foundation
 class MainViewModel: ObservableObject {
     @Published var name = "Rachel"
     @Published var isMute = false
-    @Published var timeVal = 1
+    @Published var timeVal = 0
+    @Published var timeMute = 0
 }
