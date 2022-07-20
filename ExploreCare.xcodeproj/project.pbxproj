@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0116AC2628855A0000840F81 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC2528855A0000840F81 /* RingView.swift */; };
-		0116AC282885BACF00840F81 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC272885BACE00840F81 /* AVService.swift */; };
 		0116AC2C2885BB5500840F81 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
 		0116AC2E2885BB5700840F81 /* backpack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01B9724A28729920007F1521 /* backpack.mp3 */; };
+		0116AC312886E25E00840F81 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC302886E25E00840F81 /* MainViewModel.swift */; };
+		0116AC332886ED1C00840F81 /* HapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116AC322886ED1C00840F81 /* HapticsView.swift */; };
 		011EA9B22864CC550078D4CD /* ObjectRecogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */; };
 		011EA9B42864E4750078D4CD /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EA9B32864E4750078D4CD /* AppUtility.swift */; };
 		011EA9B7286562580078D4CD /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EA9B6286562580078D4CD /* OnBoardingViewController.xib */; };
@@ -109,7 +110,8 @@
 
 /* Begin PBXFileReference section */
 		0116AC2528855A0000840F81 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
-		0116AC272885BACE00840F81 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
+		0116AC302886E25E00840F81 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0116AC322886ED1C00840F81 /* HapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView.swift; sourceTree = "<group>"; };
 		011EA9B12864CC550078D4CD /* ObjectRecogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectRecogViewController.xib; sourceTree = "<group>"; };
 		011EA9B32864E4750078D4CD /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		011EA9B6286562580078D4CD /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
@@ -207,7 +209,6 @@
 		0116AC1B288242C200840F81 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0116AC272885BACE00840F81 /* AVService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -245,6 +246,8 @@
 			children = (
 				0186D108287FC2BF006540C1 /* MainView.swift */,
 				0116AC2528855A0000840F81 /* RingView.swift */,
+				0116AC302886E25E00840F81 /* MainViewModel.swift */,
+				0116AC322886ED1C00840F81 /* HapticsView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -696,8 +699,9 @@
 			files = (
 				0186D10B287FC2BF006540C1 /* NotificationController.swift in Sources */,
 				0186D109287FC2BF006540C1 /* MainView.swift in Sources */,
+				0116AC312886E25E00840F81 /* MainViewModel.swift in Sources */,
+				0116AC332886ED1C00840F81 /* HapticsView.swift in Sources */,
 				0186D10F287FC2BF006540C1 /* ComplicationController.swift in Sources */,
-				0116AC282885BACF00840F81 /* AVService.swift in Sources */,
 				0116AC2628855A0000840F81 /* RingView.swift in Sources */,
 				0186D107287FC2BF006540C1 /* learnEnglishApp.swift in Sources */,
 				0186D10D287FC2BF006540C1 /* NotificationView.swift in Sources */,
