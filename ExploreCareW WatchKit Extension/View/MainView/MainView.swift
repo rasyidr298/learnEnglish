@@ -100,9 +100,9 @@ enum TimeMode {
 }
 
 //Trigger Notif
-func RunNotification() {
+func RunNotification(viewModel: MainViewModel) {
     let content = UNMutableNotificationContent()
-    content.title = "Pay Attention!"
+    content.title = "\(viewModel.name) Pay Attention!"
     content.subtitle = "Tap me to see more"
     content.sound = .default
     content.categoryIdentifier = "myCategory"
