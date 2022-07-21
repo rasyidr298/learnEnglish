@@ -14,6 +14,8 @@ struct ReviewView: View {
     @State var openAppCount = UserDefaults.standard.integer(forKey: "totalDays")
     @State var totalObjects: Int = 6
     
+    var viewModel = ObjectRecogViewModel()
+    
     @AppStorage("totalRunning") var showRunning = 0;
     
     var body: some View {
@@ -147,6 +149,10 @@ struct ReviewView: View {
             
             Spacer()
         }
+//        .onAppear() { //test in emulator
+//            let name = UserDefaults.standard.string(forKey: loginNameDef)
+//            viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: true)
+//        }
     }
 
     func secondsToHoursMinutesSeconds(_ seconds: Int) -> (Int, Int, Int) {

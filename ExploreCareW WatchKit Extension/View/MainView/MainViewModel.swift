@@ -7,11 +7,13 @@
 
 import Foundation
 import WatchConnectivity
+import SwiftUI
 //import Combine
 
-class MainViewModel: NSObject, ObservableObject, WCSessionDelegate {
+class MainViewModel: NSObject, ObservableObject, WCSessionDelegate, WKExtendedRuntimeSessionDelegate {
     
     var wcSession: WCSession
+    let weSession: WKExtendedRuntimeSession
     
     @Published var name = ""
     @Published var isMute = false
@@ -24,9 +26,14 @@ class MainViewModel: NSObject, ObservableObject, WCSessionDelegate {
     }
     
     init(session: WCSession = .default) {
-        wcSession = session
+        self.wcSession = session
+        self.weSession = WKExtendedRuntimeSession()
         super.init()
+        
+        weSession.delegate = self
         wcSession.delegate = self
+        
+        wcSession.activate()
         session.activate()
     }
     
@@ -43,5 +50,21 @@ class MainViewModel: NSObject, ObservableObject, WCSessionDelegate {
         }
     }
     
+    
+    //wesession
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
+    
+    
+    //weSession
+    func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
+        extendedRuntimeSession.start()
+    }
+    
+    func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
+        
+    }
+    
+    func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
+        extendedRuntimeSession.start()
+    }
 }

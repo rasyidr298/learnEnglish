@@ -17,21 +17,6 @@ class TimerEngine: NSObject, ObservableObject {
     
     private var session = WKExtendedRuntimeSession()
     
-    //    private var isPlaying: Bool { progressTimer != nil }
-    
-    //init session
-    private func startSessionIfNeeded() {
-        //        guard !isPlaying, hapticSession.state != .running else { return }
-        
-        session = WKExtendedRuntimeSession()
-        session.start()
-    }
-    
-    //stop session
-    //    private func stopSession() {
-    //        session.invalidate()
-    //    }
-    
     //start tick
     private func tick(viewModel: MainViewModel) {
         
@@ -81,7 +66,7 @@ class TimerEngine: NSObject, ObservableObject {
     //start engine
     func startPlayinTicks(viewModel: MainViewModel) {
         
-        startSessionIfNeeded()
+//        startSessionIfNeeded()
         
         progressTimer?.invalidate()
         progressTimer = nil
@@ -108,7 +93,5 @@ class TimerEngine: NSObject, ObservableObject {
             
         default: print("")
         }
-        
-        //        stopSession()
     }
 }

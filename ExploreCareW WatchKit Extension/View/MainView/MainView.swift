@@ -54,6 +54,12 @@ struct WatchView: View {
                 foregroundColors: ringColor(time: viewModel.timeVal).1
             )
             .frame(width: screenSize.width - 22, height: screenSize.height - 22)
+            .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationWillResignActiveNotification)) { _ in
+                print("Moving to the background")
+            }
+            .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification)) { _ in
+                print("Moving to the foreground")
+            }
             .onReceive(viewModel.objectWillChange, perform: { value in
                 if viewModel.isStartExplore {
                     TimerEngine.shared.startPlayinTicks(viewModel: viewModel)
@@ -110,7 +116,7 @@ func RunNotification(viewModel: MainViewModel) {
     //UNUserNotificationCenter.current().setNotificationCategories([category])
     
     // show this notification five seconds from now
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
     
     // choose a random identifier
     let request = UNNotificationRequest(identifier: "milk", content: content, trigger: trigger)
@@ -144,7 +150,7 @@ func soundMode(viewModel: MainViewModel) -> AnyView? {
     case TimeMode.yellow: print("")
     case TimeMode.red:
         do {
-            RunNotification()
+            RunNotification(viewModel: viewModel)
             return AnyView(SoundButton(viewModel: viewModel))
         }
         
