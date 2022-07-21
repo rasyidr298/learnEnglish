@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct NotificationView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Your Child Need Your Presence Now!")
+                .font(.subheadline)
+                .multilineTextAlignment(.center)
+        }
     }
 }
 

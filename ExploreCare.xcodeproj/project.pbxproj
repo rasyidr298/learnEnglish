@@ -192,13 +192,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0116AC19288242B200840F81 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0116AC1A288242B800840F81 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,7 +494,6 @@
 				0116AC1C288242C900840F81 /* App */,
 				0116AC1B288242C200840F81 /* Shared */,
 				0116AC1A288242B800840F81 /* SupportingFiles */,
-				0116AC19288242B200840F81 /* Model */,
 			);
 			path = "ExploreCareW WatchKit Extension";
 			sourceTree = "<group>";
