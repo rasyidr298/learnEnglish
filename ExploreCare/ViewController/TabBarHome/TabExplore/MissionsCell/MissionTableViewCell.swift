@@ -25,6 +25,8 @@ class MissionTableViewCell: UITableViewCell {
     
     public var missions: Mission?
     
+    private var  viewModel = ObjectRecogViewModel()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,6 +38,10 @@ class MissionTableViewCell: UITableViewCell {
         let vc = ObjectRecogViewController()
         vc.mission = self.missions
         window.rootViewController = vc
+        
+        //push data to watch
+        let name = UserDefaults.standard.string(forKey: loginNameDef)
+        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: true)
     }
     
     private func setupView() {

@@ -24,7 +24,7 @@ struct WatchView: View {
         ZStack {
             soundMode(viewModel: viewModel)
             VStack {
-                Text("\(viewModel.name) Is \n Exploring")
+                Text("\(viewModel.name) \(textMode(viewModel: viewModel))")
                     .font(.title3)
                     .bold()
                     .multilineTextAlignment(.center)
@@ -34,7 +34,7 @@ struct WatchView: View {
                         .cornerRadius(5)
                         .foregroundColor(ringColor(time: viewModel.timeVal).1.last)
                     Text(timeString(time: viewModel.timeVal))
-                        .font(.system(size: 9, weight: .bold, design: .serif))
+                        .font(.system(size: 7, weight: .bold, design: .serif))
                 }
             }
             PercentageRing(
@@ -43,9 +43,14 @@ struct WatchView: View {
                 foregroundColors: ringColor(time: viewModel.timeVal).1
             )
             .frame(width: screenSize.width - 22, height: screenSize.height - 22)
-            .onAppear() {
-                TimerEngine.shared.startPlayinTicks(viewModel: viewModel)
-            }
+            .onReceive(viewModel.objectWillChange, perform: { value in
+                if viewModel.isStartExplore {
+                    TimerEngine.shared.startPlayinTicks(viewModel: viewModel)
+                }else {
+                    TimerEngine.shared.stopPlayingTicks(type: 1)
+                    TimerEngine.shared.stopPlayingTicks(type: 2)
+                }
+            })
         }
     }
 }
@@ -75,17 +80,30 @@ struct SoundButton: View {
     }
 }
 
-//set timer enum
+//fix timer enum
 enum TimeMode {
-    static let green = 0...3
-    static let yellow = 4...6
-    static let red = 7...9
+    static let stanby = 0
+    static let green = 1...600
+    static let yellow = 601...1200
+    static let red = 1201...3000
     case outOfRange
+}
+
+//text mode
+func textMode(viewModel: MainViewModel) -> String {
+    switch viewModel.timeVal {
+    case TimeMode.stanby: return "not \n Explore"
+    case TimeMode.green: return "is \n Exploring"
+    case TimeMode.yellow: return "is \n Confused"
+    case TimeMode.red: return "is \n Need You"
+    default: return "is \n Need You"
+    }
 }
 
 //soundMode
 func soundMode(viewModel: MainViewModel) -> AnyView? {
     switch viewModel.timeVal {
+    case TimeMode.stanby: print("")
     case TimeMode.green: print("")
     case TimeMode.yellow: print("")
     case TimeMode.red: return AnyView(SoundButton(viewModel: viewModel))
@@ -97,6 +115,7 @@ func soundMode(viewModel: MainViewModel) -> AnyView? {
 //ringcolor
 func ringColor(time: Int) -> (Color, [Color]) {
     switch time {
+    case TimeMode.stanby: return (Color.green.opacity(0.2), [Color.green.opacity(0.4), Color.green.opacity(0.4)])
     case TimeMode.green: return (Color.green.opacity(0.2), [Color.green.opacity(0.4), Color.green])
     case TimeMode.yellow: return (Color.yellow.opacity(0.2), [Color.yellow.opacity(0.4), Color.yellow])
     case TimeMode.red: return (Color.red.opacity(0.2), [Color.red.opacity(0.4), Color.red])

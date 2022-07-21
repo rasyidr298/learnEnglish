@@ -14,7 +14,7 @@ extension Double {
 struct RingShapee: Shape {
     // Helper function to convert percent values to angles in degrees
     static func percentToAngle(percent: Double, startAngle: Double) -> Double {
-        (percent / 100 * 360) + startAngle
+        (percent / 1200 * 360) + startAngle
     }
     private var percent: Double
     private var startAngle: Double
@@ -30,7 +30,7 @@ struct RingShapee: Shape {
         }
     }
     
-    init(percent: Double = 100, startAngle: Double = -90, drawnClockwise: Bool = false) {
+    init(percent: Double = 1200, startAngle: Double = -90, drawnClockwise: Bool = false) {
         self.percent = percent
         self.startAngle = startAngle
         self.drawnClockwise = drawnClockwise
@@ -62,7 +62,7 @@ struct PercentageRing: View {
     private let foregroundColors: [Color]
     private let startAngle: Double = -90
     private var gradientStartAngle: Double {
-        self.percent >= 100 ? relativePercentageAngle - 360 : startAngle
+        self.percent >= 1200 ? relativePercentageAngle - 360 : startAngle
     }
     private var absolutePercentageAngle: Double {
         RingShapee.percentToAngle(percent: self.percent, startAngle: 0)
@@ -143,7 +143,7 @@ struct PercentageRing: View {
     private func getShowShadow(frame: CGSize) -> Bool {
         let circleRadius = min(frame.width, frame.height) / 2
         let remainingAngleInRadians = (360 - absolutePercentageAngle).toRadians().toCGFloat()
-        if self.percent >= 100 {
+        if self.percent >= 1200 {
             return true
         } else if circleRadius * remainingAngleInRadians <= self.ringWidth {
             return true

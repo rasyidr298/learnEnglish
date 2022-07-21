@@ -41,6 +41,8 @@ class ObjectRecogViewController: UIViewController {
     let confettiView = KConfettiView()
     var indexList: [Int] = []
     
+    var viewModel = ObjectRecogViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,6 +74,10 @@ class ObjectRecogViewController: UIViewController {
     @IBAction func closeButton(_ sender: Any) {
         guard let window = UIApplication.shared.keyWindow else {return}
         window.rootViewController = TabBarViewController()
+        
+        //push value to iwatch
+        let name = UserDefaults.standard.string(forKey: loginNameDef)
+        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: false)
     }
     
     @IBAction func finishButton(_ sender: Any) {
@@ -80,6 +86,10 @@ class ObjectRecogViewController: UIViewController {
         vc.mission = self.mission
         vc.level = mission?.level ?? 0
         window.rootViewController = vc
+        
+        //push value to iwatch
+        let name = UserDefaults.standard.string(forKey: loginNameDef)
+        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: false)
     }
 }
 
@@ -234,6 +244,10 @@ extension ObjectRecogViewController: CustomAlertDelegate {
         if indexList.uniqued().count == 3 {
             finishButton.isHidden = false
         }
+        
+        //push value to iwatch
+        let name = UserDefaults.standard.string(forKey: loginNameDef)
+        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: true)
     }
     
     func onPositiveButttonPressed(_ alert: CustomAllertViewController, indexObject: Int) {
@@ -310,6 +324,10 @@ extension ObjectRecogViewController {
             showCustomAllert(indexObject: indexObject)
             playSound(soundName: "correct.aiff")
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+            
+            //push value to iwatch
+            let name = UserDefaults.standard.string(forKey: loginNameDef)
+            viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: false)
         }
     }
 }

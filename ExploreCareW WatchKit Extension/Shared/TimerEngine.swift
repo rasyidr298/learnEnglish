@@ -14,7 +14,6 @@ class TimerEngine: NSObject, ObservableObject {
     
     private var progressTimer: Timer?
     private var hapticTimer: Timer?
-    private var muteTimer: Timer?
     
     private var session = WKExtendedRuntimeSession()
     
@@ -36,75 +35,59 @@ class TimerEngine: NSObject, ObservableObject {
     //start tick
     private func tick(viewModel: MainViewModel) {
         
-        //timer progress
-        progressTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
-            viewModel.timeVal += 1
-            
-            //timer auto mute haptic
-//            switch viewModel.timeVal {
-//            case TimeMode.green: print("")
-//            case TimeMode.yellow: print("")
-//            case TimeMode.red: do {
-//                do {
-//                    // auto mute when > second
-//                    if viewModel.isMute {
-//                        self.muteTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
-//                            viewModel.timeMute += 1
-//                            
-//                            if viewModel.timeMute % 3 == 0 {
-//                                viewModel.isMute.toggle()
-//                            }
-//                        }
-//                    }else {
-//                        viewModel.timeMute = 0
-//                        self.stopPlayingTicks(type: 3)
-//                        print(viewModel.timeMute)
-//                    }
-//                }
-//            }
-//            default: do {
-//                // auto mute when > second
-//                if viewModel.isMute {
-//                    self.muteTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
-//                        viewModel.timeMute += 1
-//                        
-//                        if viewModel.timeMute % 3 == 0 {
-//                            viewModel.isMute.toggle()
-//                        }
-//                    }
-//                }else {
-//                    viewModel.timeMute = 0
-//                    self.stopPlayingTicks(type: 3)
-//                    print(viewModel.timeMute)
-//                }
-//            }
-//            }
-        }
-        
-        
         //timer haptic
         hapticTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
-            switch viewModel.timeVal {
-            case TimeMode.green: print("")
-            case TimeMode.yellow: WKInterfaceDevice.current().play(.click)
-            case TimeMode.red: WKInterfaceDevice.current().play(.directionUp)
-            default: WKInterfaceDevice.current().play(.directionUp)
+            if !viewModel.isMute {
+                switch viewModel.timeVal {
+                case TimeMode.stanby: print("")
+                case TimeMode.green: print("")
+                case TimeMode.yellow: WKInterfaceDevice.current().play(.click)
+                case TimeMode.red: WKInterfaceDevice.current().play(.directionUp)
+                default: WKInterfaceDevice.current().play(.directionUp)
+                }
+            }
+        }
+        
+        //timer progress
+        progressTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
+            
+            //testing
+            viewModel.timeVal += 30
+            
+            //fix
+//            viewModel.timeVal += 1
+            
+            if viewModel.isMute {
+                //timer auto mute haptic
+                switch viewModel.timeVal {
+                case TimeMode.stanby: print("")
+                case TimeMode.green: print("")
+                case TimeMode.yellow :print("")
+                case TimeMode.red: do {
+                    if viewModel.timeVal % 60 == 0 {
+                        viewModel.isMute.toggle()
+                    }
+                }
+                default: do {
+                    if viewModel.timeVal % 60 == 0 {
+                        viewModel.isMute.toggle()
+                    }
+                }
+                }
             }
         }
     }
     
     //start engine
     func startPlayinTicks(viewModel: MainViewModel) {
+        
+        startSessionIfNeeded()
+        
         progressTimer?.invalidate()
         progressTimer = nil
         
         hapticTimer?.invalidate()
         hapticTimer = nil
-        
-        muteTimer?.invalidate()
-        muteTimer = nil
-        
-        startSessionIfNeeded()
         
         tick(viewModel: viewModel)
     }
@@ -121,11 +104,6 @@ class TimerEngine: NSObject, ObservableObject {
         case 2: do {
             progressTimer?.invalidate()
             progressTimer = nil
-        }
-            
-        case 3: do {
-            muteTimer?.invalidate()
-            muteTimer = nil
         }
             
         default: print("")

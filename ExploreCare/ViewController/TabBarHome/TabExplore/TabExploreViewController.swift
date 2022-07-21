@@ -21,6 +21,8 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     
     private var listObject: [Mission] = []
     
+    private var viewModel = ObjectRecogViewModel()
+    
     //For Timer
     var timer = Timer()
     var timerCounter = 1
@@ -39,7 +41,11 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     private func setupView() {
         headerView.layer.cornerRadius = 8
         
-        loginNameLabel.text = "Hi \(UserDefaults.standard.string(forKey: loginNameDef) ?? "")"
+        let name = UserDefaults.standard.string(forKey: loginNameDef)
+        loginNameLabel.text = "Hi \(name ?? "")"
+        
+        //push data to watch
+        viewModel.sendMessageToIwatch(name: name, time: 0, startExplore: false)
         
         //tableview inside scroll
         tableHeight.constant = self.view.frame.height-350
@@ -60,12 +66,8 @@ class TabExploreViewController: UIViewController, UIScrollViewDelegate {
     
     @objc func updateCounter() {
         if timerCounter > 0 {
-            print("\(timerCounter) show confetti")
             timerCounter += 1
             UserDefaults.standard.set(timerCounter, forKey: "totalRunning")
-            //print(showRunning)
-        }else {
-            //stopConfetti()
         }
     }
     

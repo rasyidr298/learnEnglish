@@ -14,9 +14,6 @@ struct ReviewView: View {
     @State var openAppCount = UserDefaults.standard.integer(forKey: "totalDays")
     @State var totalObjects: Int = 6
     
-    //@State private var showingGame = false
-    //@Binding var selectedTab: Int
-    
     @AppStorage("totalRunning") var showRunning = 0;
     
     var body: some View {
