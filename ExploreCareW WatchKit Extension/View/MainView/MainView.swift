@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct MainView: View {
     @ObservedObject var viewModel = MainViewModel()
     
     var body: some View {
         WatchView(viewModel: viewModel)
+            .onAppear{
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                    if success{
+                        print("All set")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        
     }
 }
 
@@ -50,7 +61,6 @@ struct WatchView: View {
     }
 }
 
-
 //soundButton
 struct SoundButton: View {
     @ObservedObject var viewModel: MainViewModel
@@ -83,12 +93,43 @@ enum TimeMode {
     case outOfRange
 }
 
+//Trigger Notif
+func RunNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "Pay Attention!"
+    content.subtitle = "Tap me to see more"
+    content.sound = .default
+    content.categoryIdentifier = "myCategory"
+    //let category = UNNotificationCategory(identifier: "myCategory", actions: [], intentIdentifiers: [], options: [])
+    //UNUserNotificationCenter.current().setNotificationCategories([category])
+    
+    // show this notification five seconds from now
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    
+    // choose a random identifier
+    let request = UNNotificationRequest(identifier: "milk", content: content, trigger: trigger)
+    
+    // add our notification request
+    UNUserNotificationCenter.current().add(request) { (error) in
+        if let error = error{
+            print(error.localizedDescription)
+        }else{
+            print("scheduled successfully")
+        }
+    }
+}
+
 //soundMode
 func soundMode(viewModel: MainViewModel) -> AnyView? {
     switch viewModel.timeVal {
     case TimeMode.green: print("")
     case TimeMode.yellow: print("")
-    case TimeMode.red: return AnyView(SoundButton(viewModel: viewModel))
+    case TimeMode.red:
+        do {
+            RunNotification()
+            return AnyView(SoundButton(viewModel: viewModel))
+        }
+        
     default:return AnyView(SoundButton(viewModel: viewModel))
     }
     return nil
