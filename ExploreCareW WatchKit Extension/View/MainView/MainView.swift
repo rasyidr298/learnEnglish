@@ -46,6 +46,7 @@ struct WatchView: View {
                         .foregroundColor(ringColor(time: viewModel.timeVal).1.last)*/
                     Text(timeString(time: viewModel.timeVal))
                         .font(.system(size: 12, weight: .bold, design: .serif))
+                        .foregroundColor( ringColor(time: viewModel.timeVal).1.last )
                 }
             }
             PercentageRing(
