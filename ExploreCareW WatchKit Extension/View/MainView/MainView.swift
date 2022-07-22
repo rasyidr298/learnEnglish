@@ -40,12 +40,12 @@ struct WatchView: View {
                     .bold()
                     .multilineTextAlignment(.center)
                 ZStack {
-                    Rectangle()
+                    /*Rectangle()
                         .frame(width: 40, height: 15, alignment: .center)
                         .cornerRadius(5)
-                        .foregroundColor(ringColor(time: viewModel.timeVal).1.last)
+                        .foregroundColor(ringColor(time: viewModel.timeVal).1.last)*/
                     Text(timeString(time: viewModel.timeVal))
-                        .font(.system(size: 7, weight: .bold, design: .serif))
+                        .font(.system(size: 12, weight: .bold, design: .serif))
                 }
             }
             PercentageRing(
